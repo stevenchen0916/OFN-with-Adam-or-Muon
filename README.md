@@ -39,4 +39,6 @@ python heat_formal_v3_16/runner.py --out runs/formal evaluate
 
 Use the resource setting appropriate to your CPU before running the smoke test. The recorded experiment used four CPU workers with four threads each. The full run performs the learning-rate search and 90 formal training runs of 20,000 updates. Runtime and floating-point results can vary with the environment.
 
+The optional `run16.sh` launcher is included for Slurm jobs allocated at least 16 CPUs. The direct Python commands above also work for local runs.
+
 The archived protocol is in `heat_formal_v3_16/protocol.json`. The distributed data preparation follows that protocol and writes a fresh manifest with checksums for the regenerated arrays. The published runner recognizes that manifest and records its identity in new runs.
