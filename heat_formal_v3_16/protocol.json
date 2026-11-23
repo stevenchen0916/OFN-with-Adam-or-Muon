@@ -1,0 +1,521 @@
+{
+  "status": "core_protocol_finalized_implementation_and_dry_run_pending",
+  "created_local_date": "2026-11-11",
+  "scope": "heat equation only; diagnostic phase closed; no additional mechanism experiments",
+  "architectures": {
+    "layers": {
+      "deeponet": {
+        "branch": [
+          11,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ],
+        "trunk": [
+          3,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ]
+      },
+      "mionet": {
+        "branch1": [
+          1,
+          8,
+          8,
+          25
+        ],
+        "branch2": [
+          10,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ],
+        "trunk": [
+          3,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ]
+      },
+      "qofn": {
+        "branch1": [
+          2,
+          8,
+          8,
+          25
+        ],
+        "branch2": [
+          11,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ],
+        "trunk": [
+          4,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          25
+        ]
+      }
+    },
+    "parameters": [
+      {
+        "architecture": "deeponet",
+        "parameters": 28851,
+        "relative_difference_from_deeponet": 0.0
+      },
+      {
+        "architecture": "mionet",
+        "parameters": 29114,
+        "relative_difference_from_deeponet": 0.009115801878617725
+      },
+      {
+        "architecture": "full",
+        "parameters": 29131,
+        "relative_difference_from_deeponet": 0.009705036220581609
+      },
+      {
+        "architecture": "noflow",
+        "parameters": 29107,
+        "relative_difference_from_deeponet": 0.008873175973103185
+      }
+    ],
+    "matching": "within 1% of DeepONet, not exactly equal"
+  },
+  "data": {
+    "dataset_id": "a5939b81855c835e3851b89563655dc0986f1eff0f79b2369d0c48e1d8cdfc06",
+    "train_functions": 1800,
+    "validation_functions": 200,
+    "test_functions": 200,
+    "preprocessing": "unchanged training-only PCA and QOFN minmax; raw DeepONet/MIONet coordinates",
+    "validation": "architecture/LR choices only",
+    "test": "each selected final T checkpoint scored once, after selection frozen"
+  },
+  "training": {
+    "T": 20000,
+    "interpretation": "fixed compute budget, not demonstrated convergence",
+    "p": 25,
+    "hard_boundary": false,
+    "loss": "full-batch MSE, 1800 functions x 8000 queries",
+    "schedule": {
+      "name": "cosine_without_restarts",
+      "horizon_updates": 20000,
+      "min_lr_ratio": 0.01,
+      "applied_to": "both Muon and auxiliary Adam, relative to their own initial LR",
+      "evidence": "prospective common protocol choice; stability under this complete schedule not yet empirically established"
+    },
+    "adam": {
+      "weight_decay": 0,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08
+    },
+    "muon": {
+      "weight_decay": 0,
+      "adjust_lr_fn": "match_rms_adamw",
+      "additional_manual_shape_scaling": false
+    },
+    "log_every": 500,
+    "full_checkpoint_every": 2000
+  },
+  "groups": [
+    "deeponet_adam",
+    "deeponet_muon_adam",
+    "mionet_adam",
+    "mionet_muon_adam",
+    "full_adam",
+    "full_muon_adam",
+    "noflow_adam",
+    "noflow_muon_adam",
+    "deeponet_output_muon_adam"
+  ],
+  "tuning": {
+    "seeds": [
+      289,
+      290,
+      291
+    ],
+    "adam_initial_lr_grid": [
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01
+    ],
+    "muon_initial_lr_grid": [
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "score": "mean across 3 seeds of each seed median validation relative L2 at 19000,19500,20000",
+    "auxiliary_adam_policy": "select each architecture pure-Adam LR first, then fix it in that architecture hybrid groups and tune only Muon LR",
+    "interpretation": "staged one-dimensional search, not joint optimization of two learning rates",
+    "boundary_policy": "if a finite optimum is at either grid endpoint, extend outwards by a factor of 3 in that direction, one new LR x all 3 original tuning seeds per round; continue until bracketed or outward candidate diverges; no test access; extras beyond 135 recorded",
+    "baseline_runs": 135,
+    "grid_tie_policy": "exact equal finite scores: smaller initial scanned learning rate wins; record ties",
+    "all_invalid_policy": "if no candidate has all 3 finite valid scores, no learning rate is selected and the affected configuration/dependent hybrid search is left unresolved; never select an infinite score"
+  },
+  "timing_measurement": {
+    "result_file": "timing_results/result.json",
+    "measured_group": "full_adam",
+    "updates": 1000,
+    "warmup_updates": 20,
+    "mean_seconds_per_update": 0.3198507898796676,
+    "last_500_seconds_per_update": 0.31920715591407495,
+    "measured_groups_not_including": [
+      "full_muon_adam",
+      "noflow_adam",
+      "noflow_muon_adam",
+      "wide_mionet",
+      "wide_deeponet_muon_adam"
+    ]
+  },
+  "launch_policy": "tonight finalize protocol only; next session implement runner then nine-configuration dry run, inspect checks and measured budget, then start LR search; formal seed runs follow frozen LR selection; no automatic tomorrow job",
+  "interpretation_limits": [
+    "No evidence that boundaries dominate the observed spatial error; boundary causation is not categorically excluded.",
+    "Absolute-error heatmaps do not prove correct solution shape or amplitude-only error; kappa-time coupling remains an untested hypothesis.",
+    "Temporal fluctuation within one deterministic run is not an estimate of between-seed uncertainty.",
+    "Architecture choices followed diagnostics; do not describe all choices as preregistered.",
+    "T=20000 plus cosine is a fixed comparison protocol, not evidence of convergence or established optimizer ranking.",
+    "The new 6% and 4.5% time targets are fixed before formal runs, not before the completed diagnostics.",
+    "Output-only DeepONet and QOFN have comparable layer-type coverage, not identical matrices: two versus three projections and different shapes/Adam coverage.",
+    "Auxiliary Adam in standard all-2D-Muon DeepONet covers biases; in output-only DeepONet it also covers hidden weights. Negligible sensitivity of its LR has not been established."
+  ],
+  "version": "heat-formal-v3-final-20261111",
+  "origin": "post-diagnostic protocol fixed before new formal LR search; not retrospective preregistration",
+  "supersedes": "proposed_protocol.json",
+  "source_proposal_sha256": "99e90f8761f61ed86c288d4e16c10cbf29157d6663a879a0c1f21a110f473c94",
+  "formal": {
+    "seeds": [
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301
+    ],
+    "reason": "10 fresh common seeds across all configurations avoid recycling seeds used to select LR",
+    "validation_score_not_test_checkpoint_selection": true,
+    "evaluation_checkpoint": "model at fixed T, not best-test or best-validation checkpoint",
+    "main_table": "mean and sample SD across 10 valid seed test errors; if any seed fails, mark full-10 summary unavailable and report failures plus a clearly labelled successful-runs-only descriptive summary",
+    "paired_CI": "primary: two-sided 95% paired-t CI on log-scale interaction across seeds; secondary log optimizer contrasts and original-scale differences",
+    "interaction": "I_s=ln(E_full_muon_s/E_full_adam_s)-ln(E_noflow_muon_s/E_noflow_adam_s), natural logarithms; E is final-T mean per-function test relative L2",
+    "target_time": "validation thresholds 0.06 (primary descriptive threshold) and 0.045 (secondary descriptive threshold), first logged crossing at 500-step validation checkpoints",
+    "seed_policy": "10 new seeds, no reuse of tuning seeds; same seeds for all 9 configurations",
+    "run_order": "seed outer loop 292..301; all 9 configurations reach terminal success/failure status before next seed",
+    "within_seed_order": "cycle through protocol groups, shifted left by (seed-292) modulo 9; deterministic and logged",
+    "incomplete_seed_policy": "no seed replacement; no model before T substituted for failed final checkpoint; terminal failures are reported and do not block completing other configurations in the same seed",
+    "evaluation_gate": "default after all planned runs reach terminal statuses and all hyperparameters are frozen; if infrastructure stops the campaign, an explicitly logged partial export may score only completed whole-seed blocks, caching each T-step model once; partial inference exploratory and never used to stop/change later runs",
+    "partial_reporting": "completed full seed blocks may be exported after infrastructure interruption; disclose n and reason, no claim of complete planned n=10, no test-driven decision to continue/stop/change protocol"
+  },
+  "budget": {
+    "policy": "10_fresh_formal_seeds",
+    "formal_seeds": [
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301
+    ],
+    "total_runs": 225,
+    "qofn_runs": 100,
+    "qofn_proxy_hours": 177.69488326648198,
+    "other_architecture_proxy_hours": 28.478962090210487,
+    "approximate_total_proxy_hours": 206.17384535669248,
+    "approximate_total_proxy_days": 8.590576889862186,
+    "other_architecture_proxy": "all five DeepONet/MIONet optimizer configurations proxied by previous B+Adam time; not measured for this protocol",
+    "baseline_tuning_runs": 135,
+    "baseline_formal_runs": 90,
+    "extensions_and_dry_runs_included": false,
+    "all_config_timing_status": "pending nine-configuration dry run; current total budget uses timing proxies"
+  },
+  "failure_handling": {
+    "numerical_divergence_definition": "NaN/Inf in training loss, gradients, model parameters, model outputs or validation metric; a large but finite error is not automatically classified as divergence",
+    "tuning": "stop that numerical run, retain logs/last valid checkpoint, assign mathematical selection score +infinity; if any of the 3 tuning seeds diverges at an LR, that LR mean score is +infinity; do not replace seed or retry with altered settings",
+    "infinite_score_serialization": {
+      "selection_score": null,
+      "selection_score_status": "positive_infinity",
+      "run_status": "diverged",
+      "reason": "stored separately; selector explicitly maps this status to +infinity, never treats it as a missing seed"
+    },
+    "formal": "retain original seed, LR and failed status; no replacement seed, no post hoc rescue LR, no substituting last valid model for the T-step model; report failure counts out of 10 per configuration",
+    "missing_terminal_test_error": "failed runs have no T-step test evaluation; no fabricated/capped error or artificial log ratio is inserted",
+    "infra_interruption": "power, process interruption or transient I/O is not numerical divergence; resume the same run from its complete checkpoint and retain the cause/history",
+    "zero_test_error": "a nonpositive or nonfinite error cannot be used in the log contrast; report the exact value/status and leave affected inferential contrast unavailable rather than silently adding epsilon",
+    "primary_inference_if_failure": "primary I analysis requires valid positive final errors for all 4 QOFN configurations in each of all 10 planned seeds; otherwise report primary full-10 inference unavailable/not yet complete as planned. Any available-complete-seed analysis is explicitly exploratory with exact n and failed or incomplete seed IDs",
+    "secondary_contrasts": "each paired contrast requires its participating models; incomplete contrasts follow the same unavailable-primary/exploratory-subset labelling rule"
+  },
+  "statistics": {
+    "error_definition": "E_arch,opt,seed = arithmetic mean across 200 test functions of per-function relative L2 for the frozen T-step model",
+    "log_base": "natural",
+    "optimizer_effect": "Delta_arch,s = ln(E_arch,MuonAdam,s / E_arch,Adam,s)",
+    "optimizer_direction": "negative Delta means Muon-Adam lower error; exp(mean Delta) is geometric mean error ratio; percent reduction = 100*(1-exp(mean Delta))",
+    "primary_estimand": "mean across 10 planned fresh seeds of I_s = Delta_full,s - Delta_noflow,s",
+    "interaction_direction": "negative I means a stronger proportional error reduction from Muon-Adam in Full than in No-Flow",
+    "primary_null": "mean(I_s)=0",
+    "primary_test": {
+      "name": "paired t test comparing Delta_full and Delta_noflow",
+      "equivalent": "one-sample t test of I_s against 0",
+      "alternative": "two-sided",
+      "alpha": 0.05,
+      "confidence_level": 0.95,
+      "unit": "seed, n=10 when complete",
+      "normality_assumption": "independent seed contrasts with approximately normal mean inference; assumptions stated, not established by n=10",
+      "zero_variance_rule": "if all I_s are identical, flag zero sample variance and report t-based inference unavailable rather than manufacture a finite standard error; retain descriptive contrast and the separately defined Wilcoxon result"
+    },
+    "sensitivity_test": {
+      "name": "Wilcoxon signed-rank test of I_s against 0",
+      "alternative": "two-sided",
+      "zero_method": "wilcox",
+      "zero_tie_rule": "remove exact zero contrasts; for n<=10 enumerate all sign assignments of nonzero absolute midranks, preserving ties; if all contrasts zero report statistic=0 and p=1",
+      "role": "sensitivity, not a second primary test; always report beside t test, never choose smaller p",
+      "assumption": "symmetric paired-difference distribution under null; not assumption-free"
+    },
+    "secondary_original_scale": "D_abs_arch,s = E_arch,Adam,s - E_arch,MuonAdam,s; I_abs = D_abs_full - D_abs_noflow; positive means larger absolute Muon benefit; opposite improvement sign convention from log ratio is stated",
+    "secondary_scope": "other architecture optimizer contrasts, output-projection control, absolute contrasts and time-to-target are secondary/exploratory; primary significance claim is based only on the prespecified t test of I",
+    "unit_warning": "test functions and the 3 terminal validation checkpoints are not independent seed replicates",
+    "tuned_protocol_limit": "each configuration has its own validation-selected LR; I describes the tuned protocol, not a shared-LR pure mechanism effect"
+  },
+  "time_to_target": {
+    "split": "validation only",
+    "thresholds": [
+      0.06,
+      0.045
+    ],
+    "primary_descriptive_threshold": 0.06,
+    "secondary_descriptive_threshold": 0.045,
+    "predeclaration": "chosen from completed diagnostics before the new formal LR scan; do not claim chosen before all exploratory data",
+    "event": "first scheduled checkpoint, including step 0, with unsmoothed mean per-function validation relative L2 <= threshold",
+    "observation_every_steps": 500,
+    "interpolation": "none; report first observed crossing and sampling interval, not an exact continuously observed crossing",
+    "primary_clock": "cumulative active per-run wall seconds including validation, diagnostics and checkpoint I/O; exclude queue waits and time when run is stopped/offline",
+    "secondary_clock": "cumulative forward+loss+backward+optimizer seconds at the crossing",
+    "not_reached": "if a successful run reaches T without crossing, record event=false and right-censor at its actual active wall time at T; do not impute target time=0 or extrapolate",
+    "diverged": "record numerical failure and failure time separately; a divergence before target is not ordinary successful-run right-censoring. Retain any earlier observed crossing together with later failure status; do not label it a successfully completed training run",
+    "summary": "per threshold and configuration report reached/10, failed/10, non-reached-success/10, raw event/censor times, and conditional median among reached runs labelled as such; do not compare conditional medians without these counts"
+  },
+  "dry_run_gate": {
+    "state": "not_started",
+    "when": "next work session, before any LR sweep/formal run; no automatic scheduled execution",
+    "groups": [
+      "deeponet_adam",
+      "deeponet_muon_adam",
+      "mionet_adam",
+      "mionet_muon_adam",
+      "full_adam",
+      "full_muon_adam",
+      "noflow_adam",
+      "noflow_muon_adam",
+      "deeponet_output_muon_adam"
+    ],
+    "seed": 289,
+    "steps_per_group": 200,
+    "batch": "same full 1800x8000 training data as formal runs, CPU baseline 4 threads",
+    "nominal_initial_lr": {
+      "adam": 0.001,
+      "muon": 0.001
+    },
+    "main_dry_schedule_horizon": 20000,
+    "full_schedule_unit_check": "separate bounded scheduler check verifies endpoint at 1% for both optimizers; main 200-step trial retains formal T_max=20000",
+    "checks": [
+      "all 9 models and parameter budgets",
+      "complete optimizer partition, no overlap or missing parameters",
+      "isolated Muon step changes no Adam-only parameters; inverse check for Adam using copies",
+      "save at step100, fresh process/model reload, exact next-step comparison with uninterrupted branch, continue to200",
+      "model+all optimizers+schedulers+RNG+step+timers restored; optimizer state copies do not alias",
+      "both optimizer LRs follow own initial LR times same cosine factor",
+      "fault injection validates diverged scoring/status and no replacement seeds",
+      "all-invalid grid, missing checkpoint, ties and endpoint search handled",
+      "test split remains unopened; evaluate gate and result cache exercised on synthetic fixture",
+      "seed-outer execution plan and resume skip completed successful/diverged runs correctly",
+      "completed-seed emergency export after infrastructure interruption never scores incomplete seed blocks or triggers test-driven stopping"
+    ],
+    "timing": "per group record mean/median update seconds after matched warmup plus wall overhead; replace proxy budget by sum of each group seconds_per_step * planned steps * planned run count",
+    "accuracy_use": "validation in trial only checks the logging path, never selects LR or model settings; trial checkpoints not reused in tuning/formal runs",
+    "output_scope": "separate dry_run directory and manifest; cannot mix with tuning or formal results",
+    "pass_requirement": "all checks pass and updated budget is reviewed before full scan; failing software checks are fixed and repeated, not counted as numerical scientific failures"
+  },
+  "execution_resources": {
+    "baseline": {
+      "device": "cpu",
+      "workers": 1,
+      "threads_per_worker": 4
+    },
+    "optional_throughput_test": {
+      "state": "not_run",
+      "maximum_total_wall_minutes": 10,
+      "compare": [
+        "1 process x 4 threads",
+        "2 processes x 2 threads"
+      ],
+      "measurement": "matched full-batch workloads, same model/data/LR, matched warmup; aggregate completed updates per wall second and memory/RSS/swap, not single-worker step time",
+      "choice": "use only speed/memory/stability, never accuracy, then freeze in execution manifest before scan",
+      "scope": "resource test only; no additional mechanism experiment"
+    },
+    "formal_scheduler": "finish the 9 terminal run statuses for one seed before next; if two workers used, at most two configs within that seed run concurrently"
+  },
+  "disclosure": {
+    "historical_test_exposure": "the existing test set was inspected in earlier exploratory work; this protocol does not make it a never-before-seen fresh test set",
+    "evidence": "user-provided research history and heat_fair_v2/README.md line144; no exhaustive historical test-query count asserted",
+    "current_phase": "v2 pilots, A/B, boundary/p and timing diagnostics reported no new test predictions; prospective selection continues to use validation only",
+    "architecture_schedule_T": "selected after exploratory diagnostics, then frozen before new formal comparisons; do not claim all study choices preregistered"
+  },
+  "optimizer_scope": [
+    {
+      "group": "deeponet_adam",
+      "total_parameters": 28851,
+      "muon_parameters": 0,
+      "adam_parameters": 28851,
+      "muon_parameter_names": []
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "total_parameters": 28851,
+      "muon_parameters": 28200,
+      "adam_parameters": 651,
+      "muon_parameter_names": [
+        "branch.linears.0.weight",
+        "branch.linears.1.weight",
+        "branch.linears.2.weight",
+        "branch.linears.3.weight",
+        "branch.linears.4.weight",
+        "branch.linears.5.weight",
+        "branch.linears.6.weight",
+        "trunk.linears.0.weight",
+        "trunk.linears.1.weight",
+        "trunk.linears.2.weight",
+        "trunk.linears.3.weight",
+        "trunk.linears.4.weight",
+        "trunk.linears.5.weight",
+        "trunk.linears.6.weight"
+      ]
+    },
+    {
+      "group": "mionet_adam",
+      "total_parameters": 29114,
+      "muon_parameters": 0,
+      "adam_parameters": 29114,
+      "muon_parameter_names": []
+    },
+    {
+      "group": "mionet_muon_adam",
+      "total_parameters": 29114,
+      "muon_parameters": 28422,
+      "adam_parameters": 692,
+      "muon_parameter_names": [
+        "branch1.linears.0.weight",
+        "branch1.linears.1.weight",
+        "branch1.linears.2.weight",
+        "branch2.linears.0.weight",
+        "branch2.linears.1.weight",
+        "branch2.linears.2.weight",
+        "branch2.linears.3.weight",
+        "branch2.linears.4.weight",
+        "branch2.linears.5.weight",
+        "branch2.linears.6.weight",
+        "trunk.linears.0.weight",
+        "trunk.linears.1.weight",
+        "trunk.linears.2.weight",
+        "trunk.linears.3.weight",
+        "trunk.linears.4.weight",
+        "trunk.linears.5.weight",
+        "trunk.linears.6.weight"
+      ]
+    },
+    {
+      "group": "full_adam",
+      "total_parameters": 29131,
+      "muon_parameters": 0,
+      "adam_parameters": 29131,
+      "muon_parameter_names": []
+    },
+    {
+      "group": "full_muon_adam",
+      "total_parameters": 29131,
+      "muon_parameters": 2700,
+      "adam_parameters": 26431,
+      "muon_parameter_names": [
+        "branch1.output_layer.weight",
+        "branch2.output_layer.weight",
+        "trunk.output_layer.weight"
+      ]
+    },
+    {
+      "group": "noflow_adam",
+      "total_parameters": 29107,
+      "muon_parameters": 0,
+      "adam_parameters": 29107,
+      "muon_parameter_names": []
+    },
+    {
+      "group": "noflow_muon_adam",
+      "total_parameters": 29107,
+      "muon_parameters": 2700,
+      "adam_parameters": 26407,
+      "muon_parameter_names": [
+        "branch1.output_layer.weight",
+        "branch2.output_layer.weight",
+        "trunk.output_layer.weight"
+      ]
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "total_parameters": 28851,
+      "muon_parameters": 2500,
+      "adam_parameters": 26351,
+      "muon_parameter_names": [
+        "branch.linears.6.weight",
+        "trunk.linears.6.weight"
+      ]
+    }
+  ],
+  "protocol_id": "24b6affe1d3341cb3df7343969b146bd004fbc523e29c950f08a66d534a920aa"
+}

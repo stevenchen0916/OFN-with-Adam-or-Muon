@@ -1,0 +1,8 @@
+.DS_Store
+.mplcache/
+.venv/
+__pycache__/
+heat_fair_v2/results/
+heat_formal_v3_16/results/
+replay/
+runs/

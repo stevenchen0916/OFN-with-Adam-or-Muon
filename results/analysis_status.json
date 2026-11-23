@@ -1,0 +1,19 @@
+{
+  "protocol_id": "24b6affe1d3341cb3df7343969b146bd004fbc523e29c950f08a66d534a920aa",
+  "primary_I_status": "planned_complete",
+  "primary_I_n": 10,
+  "planned_n": 10,
+  "complete_seed_blocks": [
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301
+  ],
+  "historical_test_exposure_disclosed": true
+}

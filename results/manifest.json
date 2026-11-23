@@ -1,0 +1,26 @@
+{
+  "protocol_id": "24b6affe1d3341cb3df7343969b146bd004fbc523e29c950f08a66d534a920aa",
+  "protocol_file_sha": "1f178b40415be1f41aa00f095f5091fdac14ff75e56bd3b21d62cad9c885445d",
+  "code": {
+    "local": {
+      "control.py": "8dc121ce6e02ea076aebc667a6056de321d94fa822227f44f0c49e3b4bbdca24",
+      "runtime.py": "c28710aa03f52fb2a53996cb78c1819d98cc581eaf2808f740f5c3368e0db6c2",
+      "engine.py": "37aba33c31fb03b961395e7340a2b2e822580910f7a2ae93788df0ec01696897",
+      "runner.py": "cd4cda6e70e3948e2ab1cf637557bdbdd9d7570ff30d7a002db771837f87616f",
+      "analysis.py": "2859b74af45291cc9020ffa03dc1562a2a6b635f8b969aa0d6066b9d4dbf0379",
+      "throughput.py": "5d5458e35ed028beeaa375859a2d2509f37f620c47b7bf2c913544d7e13703e4",
+      "model_config.py": "4d6ddcd918fdc0c7f7b9402c271c352855981285298a2020c8ef95783267a3fc"
+    },
+    "old_helper_sha": "2a611f88576dd66e1a20dfd01025a242b6d2cfbf8685b8371dd833c4cc477c05",
+    "execution_amendment_sha": "c9d7fbf89e8ec95368df16b6dcae3b0ffa0d11e62223e5dd94891f942f621b1b"
+  },
+  "dataset_id": "a5939b81855c835e3851b89563655dc0986f1eff0f79b2369d0c48e1d8cdfc06",
+  "software": {
+    "torch": "2.13.0+cpu",
+    "deepxde": "1.15.0",
+    "numpy": "2.5.1",
+    "python": "3.12.16"
+  },
+  "device": "cpu",
+  "interoperability_threads": 1
+}

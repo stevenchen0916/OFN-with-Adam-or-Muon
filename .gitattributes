@@ -1,0 +1,7 @@
+* text=auto eol=lf
+heat_formal_v3_16/*.py -text
+heat_formal_v3_16/*.json -text
+heat_fair_v2/**/*.py -text whitespace=-blank-at-eof
+results/* -text
+results/*.csv whitespace=cr-at-eol
+*.npz binary

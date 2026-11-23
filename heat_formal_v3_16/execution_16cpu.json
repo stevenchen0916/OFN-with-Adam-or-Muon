@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-12",
+  "authorization": "User requested 16 CPU execution and starting the formal experiment",
+  "kind": "execution-resource amendment; original scientific protocol remains byte-identical",
+  "protocol_id": "24b6affe1d3341cb3df7343969b146bd004fbc523e29c950f08a66d534a920aa",
+  "device": "cpu",
+  "workers": 4,
+  "threads_per_worker": 4,
+  "allocated_cpus": 16,
+  "formal_seed_barrier": "all 9 configurations for one seed terminate before advancing to next seed",
+  "unchanged": ["data", "models", "loss", "T", "schedule", "learning-rate selection", "seeds", "test gate", "failure policy", "primary log I analysis"],
+  "new_output_directory": "results16",
+  "new_smoke_and_measured_budget_required": true
+}

@@ -1,0 +1,19 @@
+group,threshold,planned_n,n_reached,n_diverged,n_success_not_reached,n_not_evaluated,conditional_median_wall_seconds,warning
+deeponet_adam,0.06,10,10,0,0,0,296.27524489350617,Conditional on crossing; inspect censor/failure counts before comparing times.
+deeponet_adam,0.045,10,10,0,0,0,570.0962705314159,Conditional on crossing; inspect censor/failure counts before comparing times.
+deeponet_muon_adam,0.06,10,10,0,0,0,717.4529648860916,Conditional on crossing; inspect censor/failure counts before comparing times.
+deeponet_muon_adam,0.045,10,2,0,8,0,1279.0192024558783,Conditional on crossing; inspect censor/failure counts before comparing times.
+mionet_adam,0.06,10,10,0,0,0,465.30565356556326,Conditional on crossing; inspect censor/failure counts before comparing times.
+mionet_adam,0.045,10,7,0,3,0,841.7421975024045,Conditional on crossing; inspect censor/failure counts before comparing times.
+mionet_muon_adam,0.06,10,10,0,0,0,387.4376284768805,Conditional on crossing; inspect censor/failure counts before comparing times.
+mionet_muon_adam,0.045,10,10,0,0,0,828.9281464749947,Conditional on crossing; inspect censor/failure counts before comparing times.
+full_adam,0.06,10,5,0,5,0,9464.925198093057,Conditional on crossing; inspect censor/failure counts before comparing times.
+full_adam,0.045,10,0,0,10,0,,Conditional on crossing; inspect censor/failure counts before comparing times.
+full_muon_adam,0.06,10,10,0,0,0,3129.0179172465578,Conditional on crossing; inspect censor/failure counts before comparing times.
+full_muon_adam,0.045,10,10,0,0,0,5616.559740697965,Conditional on crossing; inspect censor/failure counts before comparing times.
+noflow_adam,0.06,10,10,0,0,0,7182.793688523583,Conditional on crossing; inspect censor/failure counts before comparing times.
+noflow_adam,0.045,10,0,0,10,0,,Conditional on crossing; inspect censor/failure counts before comparing times.
+noflow_muon_adam,0.06,10,10,0,0,0,3049.8720927350223,Conditional on crossing; inspect censor/failure counts before comparing times.
+noflow_muon_adam,0.045,10,10,0,0,0,5947.909434904344,Conditional on crossing; inspect censor/failure counts before comparing times.
+deeponet_output_muon_adam,0.06,10,10,0,0,0,237.6687411237508,Conditional on crossing; inspect censor/failure counts before comparing times.
+deeponet_output_muon_adam,0.045,10,10,0,0,0,519.012652692385,Conditional on crossing; inspect censor/failure counts before comparing times.

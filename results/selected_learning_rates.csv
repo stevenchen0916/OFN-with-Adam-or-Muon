@@ -1,0 +1,10 @@
+group,adam_lr,muon_lr
+deeponet_adam,0.003,
+deeponet_muon_adam,0.003,0.001
+mionet_adam,0.001,
+mionet_muon_adam,0.001,0.01
+full_adam,0.001,
+full_muon_adam,0.001,0.001
+noflow_adam,0.001,
+noflow_muon_adam,0.001,0.003
+deeponet_output_muon_adam,0.003,0.001
