@@ -1,8 +1,8 @@
-# Orthogonal Flow Networks for the heat equation
+# Orthogonal Flow Networks for the heat and Burgers equations
 
-Code and numerical results for *Architecture–Optimizer Interactions in Orthogonal Flow Networks for Heat Equation Operator Learning*. The experiment compares Adam with a Muon–Adam hybrid across nine configurations on a source-free two-dimensional heat-equation task.
+This repository provides the heat-equation experiment code and the datasets and numerical results for two operator-learning tasks. Both experiments compare Adam with a Muon–Adam hybrid across nine configurations.
 
-## Check the example and replay the results
+## Check the heat-equation example and replay the results
 
 Create a Python environment and install the dependencies. The archived experiment used Python 3.12.16 and PyTorch 2.13.0 on CPU.
 
@@ -26,7 +26,7 @@ The full dataset is included in [`heat_fair_v2/results/data/`](heat_fair_v2/resu
 
 To regenerate the dataset in a separate directory, run `python prepare_data.py --out runs/regenerated-data`. This command samples the Gaussian initial fields and diffusivities, solves the PDE, and applies the fixed split.
 
-## Run the experiment
+## Run the heat-equation experiment
 
 The runner reads the included dataset from its default location.
 
@@ -47,3 +47,9 @@ Use the resource setting appropriate to your CPU before running the smoke test. 
 The optional `run16.sh` launcher is included for Slurm jobs allocated at least 16 CPUs. The direct Python commands above also work for local runs.
 
 The archived protocol is in `heat_formal_v3_16/protocol.json`. The distributed data preparation follows that protocol and writes a fresh manifest with checksums for the regenerated arrays. The published runner recognizes that manifest and records its identity in new runs.
+
+## Formal Burgers experiment
+
+The [Burgers dataset](burgers/data/) contains 1,800 training cases, 200 validation cases, and 200 independently generated test cases for the forced periodic viscous Burgers equation. Each case includes 13 initial-condition values (`x1`), 13 forcing values (`x2`), and 2,500 reference solution values (`y`) indexed by the query features in `xt`. The directory also includes the training-derived normalization bounds, the split indices, and the checksummed dataset manifest.
+
+See the [formal protocol](burgers/protocol.json) for the dataset definition and evaluation design. The [Burgers results](burgers/results/) contain the 90 run-level test results, paired contrasts, validation curves, and learning-rate search and selection records.

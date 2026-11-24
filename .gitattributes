@@ -4,4 +4,6 @@ heat_formal_v3_16/*.json -text
 heat_fair_v2/**/*.py -text whitespace=-blank-at-eof
 results/* -text
 results/*.csv whitespace=cr-at-eol
+burgers/protocol.json -text
+burgers/results/*.csv -text whitespace=cr-at-eol
 *.npz binary

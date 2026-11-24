@@ -1,0 +1,40 @@
+{
+  "version": "burgers-fresh-test-v1",
+  "source_training_sha": "a0fdf11ea1d356e369e82db8854f64249016ecf8ccfc7f182229800c882424cb",
+  "generator_sha": "b93916d9ada483a40603fe15c98972892d3917140f264f2fc98c98920a25c6b5",
+  "original_generator_sha": "39b5c467f06a15a1245bcb54eb157b745da71b0a41ea39ebed4e4809e487c18b",
+  "counts": {
+    "train": 1800,
+    "val": 200,
+    "test": 200
+  },
+  "split_seed": 2026111801,
+  "branch_dimensions": [
+    13,
+    13
+  ],
+  "trunk_dimension": 5,
+  "layout": "t,x; x varies fastest",
+  "viscosity": 0.1,
+  "query_points": 2500,
+  "preprocessing": "train-only per-feature min/max; no PCA; raw dense baselines",
+  "fresh_test": {
+    "grf_seed": 2026111802,
+    "amplitude_seed": 2026111803,
+    "n": 200,
+    "recipe": "ExpSineSquared GRF length_scale=1.5 N=1000 cubic; centered and RMS-normalized; u0 amplitude [.05,.3], f amplitude [.05,.2]",
+    "solver": "original Rusanov + diffusion, nx=256 nt_nominal=2000 cfl=.4; first solver step reaching label time",
+    "legacy_test_opened": false,
+    "test_model_evaluations": 0,
+    "numpy": "2.5.1",
+    "deepxde": "1.15.0"
+  },
+  "files": {
+    "preprocessing.npz": "f0f91d26a2f39081584c7e01204752793a6a65cb664544aabf67e1f47a13d956",
+    "split_indices.npz": "1403bc945cb9978f3c6ec3bacc9ef615bb9b4d2e4eb1ae837e8264152fb781b5",
+    "test.npz": "82120ea2b0983630f49b8f613d1e645c53ebeda501ce097f7f7c655998ff69dd",
+    "train.npz": "c03e61fa0927e9a58f4899ed8db3e59306e3ecee7255fccb32bee041d289cbc9",
+    "val.npz": "80fd50b227cec5c268b178dded33291f4bbb0aa943cd8021fc334fd133575117"
+  },
+  "dataset_id": "b6cf6b04f50ec20b0a3de1c772f068797201e611a7be7e4f5938e18927bb61c6"
+}
