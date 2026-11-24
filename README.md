@@ -20,12 +20,17 @@ python verify_results.py --out replay
 
 The replay yields hybrid-to-Adam geometric mean test-error ratios of 0.608 for Full OFN and 0.707 for No-Flow OFN. The ratio of the two effects is 0.860 (95% CI [0.808, 0.915]).
 
-## Regenerate the complete dataset and run the experiment
+## Formal heat-equation dataset
 
-`python prepare_data.py` samples the Gaussian initial fields and diffusivities, solves the PDE, and applies the fixed split of 1,800 training, 200 validation, and 200 test cases. PCA and normalization bounds are computed using the training split. The generated arrays and their checksums are written to `heat_fair_v2/results/data/`.
+The full dataset is included in [`heat_fair_v2/results/data/`](heat_fair_v2/results/data/). The directory contains `train.npz` (1,800 cases), `val.npz` (200 cases), and `test.npz` (200 cases). Each case has 8,000 reference values. The split archives contain diffusivities (`x1`), PCA features (`x2`), query coordinates (`xt`), reference temperatures (`y`), and sample indices (`original_ids`). The `preprocessing.npz` archive contains the PCA parameters and normalization bounds fitted on the training set. The `manifest.json` file records the generation seeds, split counts, and SHA-256 checksums.
+
+To regenerate the dataset in a separate directory, run `python prepare_data.py --out runs/regenerated-data`. This command samples the Gaussian initial fields and diffusivities, solves the PDE, and applies the fixed split.
+
+## Run the experiment
+
+The runner reads the included dataset from its default location.
 
 ```sh
-python prepare_data.py
 python heat_formal_v3_16/runner.py --out runs/formal check
 python heat_formal_v3_16/runner.py --out runs/formal verify
 python heat_formal_v3_16/runner.py --out runs/formal resources --workers 4 --threads 4

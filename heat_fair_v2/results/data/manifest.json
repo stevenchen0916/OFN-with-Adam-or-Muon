@@ -1,0 +1,27 @@
+{
+  "source_dataset_id": "a5939b81855c835e3851b89563655dc0986f1eff0f79b2369d0c48e1d8cdfc06",
+  "function_seeds": {
+    "train": [
+      1234,
+      5678
+    ],
+    "test": [
+      101234,
+      105678
+    ]
+  },
+  "split_seed": 2026,
+  "counts": {
+    "train": 1800,
+    "val": 200,
+    "test": 200
+  },
+  "target_order": "y,x,t",
+  "files": {
+    "preprocessing.npz": "13d96d6d9e0722508ba158e2210293ddd4fa4547391690e9116b52b72a8f55f8",
+    "test.npz": "e6ca7fdcc54ea316a7598fcedbd1c8e097133e54e19f5e14dc2542b0396c8a8d",
+    "train.npz": "bd634e23695e4f0627322f624b18dad5bd083d5d26e26ff81e2fd441f460fc9e",
+    "val.npz": "58d0790fbefbf77c99d75d948a72b49ce1836f60cbfe1a9e9cce395d74614f19"
+  },
+  "dataset_id": "bd5a2bdd7eac8451a893297a03a0c3943863c60d27c4127f99d33e5e494be4e7"
+}

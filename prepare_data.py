@@ -65,9 +65,9 @@ def solve_pool(kappa, sensors, name):
     return fields
 
 
-def prepare_data():
-    if DATA.exists():
-        raise FileExistsError(f"Prepared data already exists at {DATA}.")
+def prepare_data(data_dir=DATA):
+    if data_dir.exists():
+        raise FileExistsError(f"Prepared data already exists at {data_dir}.")
     protocol = json.loads((ROOT / "heat_formal_v3_16/protocol.json").read_text())
     kappa, sensors = sample_inputs(2000, 0)
     test_kappa, test_sensors = sample_inputs(200, 100000)
@@ -79,8 +79,8 @@ def prepare_data():
     fields = solve_pool(kappa, sensors, "training pool")
     test_fields = solve_pool(test_kappa, test_sensors, "test pool")
 
-    DATA.parent.mkdir(parents=True, exist_ok=True)
-    with TemporaryDirectory(dir=DATA.parent) as temporary:
+    data_dir.parent.mkdir(parents=True, exist_ok=True)
+    with TemporaryDirectory(dir=data_dir.parent) as temporary:
         output = Path(temporary) / "data"
         output.mkdir()
         for split, ids in (("train", train_ids), ("val", val_ids)):
@@ -115,14 +115,15 @@ def prepare_data():
             json.dumps(manifest, sort_keys=True).encode(),
         ).hexdigest()
         (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-        output.rename(DATA)
-    print(f"Prepared 1,800 training, 200 validation, and 200 test cases in {DATA}.")
+        output.rename(data_dir)
+    print(f"Prepared 1,800 training, 200 validation, and 200 test cases in {data_dir}.")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check-example", action="store_true")
+    parser.add_argument("--out", type=Path, default=DATA, help="Directory for regenerated data.")
     args = parser.parse_args()
     verify_example()
     if not args.check_example:
-        prepare_data()
+        prepare_data(args.out)
