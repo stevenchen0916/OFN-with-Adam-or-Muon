@@ -7,3 +7,4 @@ results/*.csv whitespace=cr-at-eol
 burgers/protocol.json -text
 burgers/results/*.csv -text whitespace=cr-at-eol
 *.npz binary
+burgers/BurgersProject/**/*.csv -text
