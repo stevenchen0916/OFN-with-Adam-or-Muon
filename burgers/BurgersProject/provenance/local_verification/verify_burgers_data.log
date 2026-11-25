@@ -1,0 +1,12 @@
+Using backend: pytorch
+Other supported backends: tensorflow.compat.v1, tensorflow, jax, paddle.
+paddle supports more examples now and is recommended.
+test_both_training_input_encodings_match_models (__main__.BurgersDataChecks.test_both_training_input_encodings_match_models) ... ok
+test_query_target_contract (__main__.BurgersDataChecks.test_query_target_contract) ... ok
+test_split_and_train_only_preprocessing (__main__.BurgersDataChecks.test_split_and_train_only_preprocessing) ... ok
+test_test_load_is_closed_before_any_array_access (__main__.BurgersDataChecks.test_test_load_is_closed_before_any_array_access) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.341s
+
+OK

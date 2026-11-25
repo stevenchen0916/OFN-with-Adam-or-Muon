@@ -1,0 +1,16 @@
+{
+  "name": "Heat independent-test replication patch",
+  "date": "2026-11-18",
+  "tested_locally": true,
+  "server_formal_replication_executed": false,
+  "files": {
+    "fresh_test/LOCAL_VERIFICATION.json": "aa2a68227f20905ea483c13fd472649eb3fb417dc2c5726a31426be3f6e21e9f",
+    "fresh_test/protocol.json": "a902922fad8e06cdf35d7164e5caf5cf73f7eeb40d9d2a4b0df08c97565f9f65",
+    "fresh_test/replicate.py": "3ccfc7205784b0f350eb7784932c2065ed21334954fce56f1ffec1e2b69618ab",
+    "fresh_test/requirements-extra.txt": "ea2d3d1c9bcabc70219960dc2cb0bfb1bb9d44c614d501c01a6fd107d9d4a3bb",
+    "fresh_test/verify_local.py": "fd6ce3fdfa7d90ac0480a1d880ebdef2f393ec8e4333337eb95bd830405f21e9",
+    "run_fresh_test16.slurm": "c20d63faefc19b71e171d9ff4f8431139337c166035fc2b4392d7f74ccdbdb4a",
+    "独立测试运行说明_20261118.md": "d0f68c705e49da487229d26e79ab2dce1b17ce84c8b2e0812b95f5d8e48dce00"
+  },
+  "dependency_fix": "Added tqdm requirement/instructions only; replicate.py and the frozen experiment hashes remain unchanged."
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-18",
+  "authorization": "User requested Burgers 16-CPU server package",
+  "kind": "new PDE-specific scientific protocol with inherited heat evaluation convention",
+  "protocol_id": "451ece99566b82c72542662a411595b0f76c060ab15669f374246eee1ca17ac9",
+  "device": "cpu",
+  "workers": 4,
+  "threads_per_worker": 4,
+  "allocated_cpus": 16,
+  "new_output_directory": "results16",
+  "formal_seed_barrier": "all nine configurations terminal before next seed"
+}

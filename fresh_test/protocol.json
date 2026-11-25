@@ -1,0 +1,16 @@
+{
+  "name": "heat-independent-test-20261118-v1",
+  "purpose": "New input-pair replication of the frozen 90 formal checkpoints; no fitting, tuning or retraining",
+  "n_test": 200,
+  "kappa_seed": 2026111801,
+  "initial_field_seed": 2026111802,
+  "training_seeds": [292, 293, 294, 295, 296, 297, 298, 299, 300, 301],
+  "workers": 4,
+  "threads_per_worker": 4,
+  "primary_contrast": "mean_s[ln(E_full_M,s/E_full_A,s)-ln(E_noflow_M,s/E_noflow_A,s)]",
+  "analysis": "Two-sided seed-level t interval/test and exact signed-rank sensitivity; retain either interaction sign and all 90 model scores",
+  "metric": "Mean per-solution relative discrete L2; float32 predictions/residuals and float64 norm reductions; denominator clamp 1e-12, matching the original evaluator",
+  "data_conventions": "Original Gaussian family, solver, requested times, corrected y,x,t flattening, and frozen training-only PCA/minmax",
+  "interpretation": "Independent test-input replication conditional on the same trained models, training set and split; not independent retraining or a new PDE",
+  "frozen_training_protocol_id": "24b6affe1d3341cb3df7343969b146bd004fbc523e29c950f08a66d534a920aa"
+}

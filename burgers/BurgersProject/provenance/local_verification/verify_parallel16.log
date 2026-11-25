@@ -1,0 +1,22 @@
+Using backend: pytorch
+Other supported backends: tensorflow.compat.v1, tensorflow, jax, paddle.
+paddle supports more examples now and is recommended.
+test_backup_restores_isolated_16cpu_layout (__main__.ParallelExecution.test_backup_restores_isolated_16cpu_layout) ... Backup verified: /private/var/folders/mg/n1zzj66x65596150hws_z_tm0000gn/T/tmpn6e53stj/burgers_backup_20261118_235933.zip (0.1 MiB)
+ok
+test_dispatch_has_four_slots_and_never_duplicates_jobs (__main__.ParallelExecution.test_dispatch_has_four_slots_and_never_duplicates_jobs) ... START synthetic seed=0 phase=train
+START synthetic seed=1 phase=train
+START synthetic seed=2 phase=train
+START synthetic seed=3 phase=train
+START synthetic seed=4 phase=train
+START synthetic seed=5 phase=train
+START synthetic seed=6 phase=train
+START synthetic seed=7 phase=train
+START synthetic seed=8 phase=train
+ok
+test_four_worker_budget_retains_whole_seed_barrier (__main__.ParallelExecution.test_four_worker_budget_retains_whole_seed_barrier) ... ok
+test_four_workers_four_threads_resource_context (__main__.ParallelExecution.test_four_workers_four_threads_resource_context) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.042s
+
+OK

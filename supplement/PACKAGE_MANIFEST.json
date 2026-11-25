@@ -1,0 +1,8 @@
+{
+  "supplement/experiment.py": "de920ff6890dd2f39d7543f15839b252a289705e4df8bf95a039010dee7c16b1",
+  "supplement/plot.py": "9c43e573ab23f8a5ad1bd7d9413979ba7c59843635fdb6a93c6b77e2b8f6a02c",
+  "supplement/protocol.json": "caa2003a8d90b56b169b8c7b72c915f8b523f88074be6cfa220592b1466bfcbe",
+  "supplement/LOCAL_VERIFICATION.json": "407b9912a6be56858398abee7a94240d26681eefc4ac952076bb484e83a89091",
+  "supplement/运行说明.md": "9c6e8ed26c195f39d4834c422b5b2737fdfad1b18d3cea26264fb581b903e6a4",
+  "run_supplement16.slurm": "6bd5f8dd7bb0e42da64afaeacbe33cff9bef2c19ce7201f3785b491e42a6eb72"
+}

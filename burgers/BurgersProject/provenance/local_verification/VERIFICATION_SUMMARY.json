@@ -1,0 +1,25 @@
+{
+  "checked_local_date": "2026-11-19",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "unit_test_count": 33,
+  "all_unit_tests_passed": true,
+  "nine_real_data_smoke_passed": true,
+  "smoke_steps_per_group": 200,
+  "smoke_resumed_from_step": 100,
+  "resources": {
+    "workers": 4,
+    "threads_per_worker": 4,
+    "device": "cpu"
+  },
+  "test_model_evaluations": 0,
+  "formal_Burgers_training_completed": false,
+  "formal_Burgers_training_started": false,
+  "wrapper_smoke_and_all_order_checked": true,
+  "report_pipeline_checked_with_synthetic_fixture": true,
+  "synthetic_fixture_included_in_delivery": false,
+  "shell_syntax_checked": true,
+  "server_linux_execution": "will rerun all gates on the server; local native checks were macOS",
+  "protocol_id": "451ece99566b82c72542662a411595b0f76c060ab15669f374246eee1ca17ac9",
+  "dataset_id": "b6cf6b04f50ec20b0a3de1c772f068797201e611a7be7e4f5938e18927bb61c6",
+  "no_short_run_ranking_used_for_hyperparameter_selection": true
+}

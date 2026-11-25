@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "new_replication_data_generated": false,
+  "known_old_sample_and_pca_reproduced": true,
+  "physical_y_t_exchange_detected": true,
+  "nine_dry_run_models_parallel_scores_match_original_evaluator": true,
+  "per_solution_scores": 200,
+  "original_statistical_result_reproduced": true,
+  "all_90_committed_score_caches_reused": true,
+  "mismatched_score_cache_rejected": true,
+  "four_sample_parallel_generation_and_data_resume_passed": true,
+  "missing_original_outputs_rejected": true,
+  "scope": "Local data and dry-run checkpoints; not the server's formal 90-checkpoint replication"
+}

@@ -1,0 +1,38 @@
+{
+  "contrast": "I",
+  "scale": "natural_log_ratio",
+  "role": "unique_primary",
+  "available_seeds": [
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301
+  ],
+  "missing_seeds": [],
+  "n": 10,
+  "planned_n": 10,
+  "mean": -0.1508551515711193,
+  "sample_sd": 0.08656285882358689,
+  "analysis_status": "planned_complete",
+  "t_statistic": -5.51097644206592,
+  "paired_t_p": 0.00037482750192249775,
+  "t_ci_low": -0.21277849043113586,
+  "t_ci_high": -0.08893181271110276,
+  "t_status": "computed",
+  "wilcoxon": {
+    "statistic": 1.0,
+    "pvalue": 0.00390625,
+    "nonzero_n": 10,
+    "method": "all sign assignments; absolute midranks, exact zeros removed"
+  },
+  "confirmatory_t_p": 0.00037482750192249775,
+  "definition": "ln(E_full_M/E_full_A) - ln(E_noflow_M/E_noflow_A)",
+  "direction": "negative: greater proportional Muon benefit with Full flow",
+  "secondary_test_role": "Wilcoxon sensitivity; do not select the smaller p"
+}

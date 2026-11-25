@@ -1,0 +1,15 @@
+{
+  "audit_local_date": "2026-11-19",
+  "searched_roots": [
+    "/Users/littledoraemon/Documents/ChatGPT/论文",
+    "/Users/littledoraemon/PycharmProjects/QOFN",
+    "/Users/littledoraemon/PycharmProjects/QOFN&Muon",
+    "/Users/littledoraemon/Desktop/heat-project"
+  ],
+  "excluded": "virtual environments, git directories and this newly created package/checks",
+  "metadata_scan": "case-insensitive burgers|bu_v[0-9]|bu_train|bu_test in result JSON, protocol JSON and summary CSV; Burgers-like filenames were also inspected",
+  "matched_preexisting_formal_campaign_found": false,
+  "legacy_data_only_source": "/Users/littledoraemon/PycharmProjects/QOFN/data/data/BU_train.npz",
+  "scope_limit": "This is a local material audit, not a claim about unprovided server directories or external results.",
+  "delivery_status": "server_package_prepared; formal Burgers evidence still requires the planned campaign"
+}

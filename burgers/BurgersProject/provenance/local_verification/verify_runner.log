@@ -1,0 +1,117 @@
+Using backend: pytorch
+Other supported backends: tensorflow.compat.v1, tensorflow, jax, paddle.
+paddle supports more examples now and is recommended.
+test_actual_search_extension_then_diverged_outer_point (__main__.Correctness.test_actual_search_extension_then_diverged_outer_point) ... EXTEND deeponet_adam: add initial LR 0.03; original three seeds retained.
+SELECTED deeponet_adam: Adam=0.01, Muon=None, score=100
+ok
+test_all_invalid_search_remains_unresolved (__main__.Correctness.test_all_invalid_search_remains_unresolved) ... ok
+test_all_nine_small_models_resume_and_routing (__main__.Correctness.test_all_nine_small_models_resume_and_routing) ... dry_run/synthetic | deeponet_adam | seed=289 | step=0/200 val=0.36756882 train_s=0.0 wall_s=0.1
+dry_run/synthetic | deeponet_adam | seed=289 | step=50/200 val=0.24581961 train_s=0.0 wall_s=0.1
+dry_run/synthetic | deeponet_adam | seed=289 | step=100/200 val=0.16773994 train_s=0.1 wall_s=0.2
+dry_run/synthetic | deeponet_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | deeponet_adam | seed=289 | step=150/200 val=0.12636365 train_s=0.1 wall_s=0.3
+dry_run/synthetic | deeponet_adam | seed=289 | step=200/200 val=0.092545357 train_s=0.1 wall_s=0.3
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=0/200 val=0.36756882 train_s=0.0 wall_s=0.0
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=50/200 val=0.29001562 train_s=0.0 wall_s=0.1
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=100/200 val=0.24261676 train_s=0.1 wall_s=0.2
+dry_run/synthetic | deeponet_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=150/200 val=0.20980395 train_s=0.1 wall_s=0.3
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=200/200 val=0.15943334 train_s=0.2 wall_s=0.3
+dry_run/synthetic | mionet_adam | seed=289 | step=0/200 val=0.94538325 train_s=0.0 wall_s=0.0
+dry_run/synthetic | mionet_adam | seed=289 | step=50/200 val=0.37833045 train_s=0.0 wall_s=0.1
+dry_run/synthetic | mionet_adam | seed=289 | step=100/200 val=0.27033837 train_s=0.1 wall_s=0.2
+dry_run/synthetic | mionet_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | mionet_adam | seed=289 | step=150/200 val=0.20990051 train_s=0.1 wall_s=0.3
+dry_run/synthetic | mionet_adam | seed=289 | step=200/200 val=0.1604328 train_s=0.2 wall_s=0.3
+dry_run/synthetic | mionet_muon_adam | seed=289 | step=0/200 val=0.94538325 train_s=0.0 wall_s=0.0
+dry_run/synthetic | mionet_muon_adam | seed=289 | step=50/200 val=0.67819747 train_s=0.1 wall_s=0.1
+dry_run/synthetic | mionet_muon_adam | seed=289 | step=100/200 val=0.32605368 train_s=0.1 wall_s=0.2
+dry_run/synthetic | mionet_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | mionet_muon_adam | seed=289 | step=150/200 val=0.26323836 train_s=0.2 wall_s=0.3
+dry_run/synthetic | mionet_muon_adam | seed=289 | step=200/200 val=0.2155517 train_s=0.2 wall_s=0.4
+dry_run/synthetic | full_adam | seed=289 | step=0/200 val=1.0437115 train_s=0.0 wall_s=0.0
+dry_run/synthetic | full_adam | seed=289 | step=50/200 val=0.8143817 train_s=0.2 wall_s=0.2
+dry_run/synthetic | full_adam | seed=289 | step=100/200 val=0.24466027 train_s=0.3 wall_s=0.4
+dry_run/synthetic | full_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | full_adam | seed=289 | step=150/200 val=0.17294636 train_s=0.5 wall_s=0.7
+dry_run/synthetic | full_adam | seed=289 | step=200/200 val=0.15234332 train_s=0.6 wall_s=0.8
+dry_run/synthetic | full_muon_adam | seed=289 | step=0/200 val=1.0437115 train_s=0.0 wall_s=0.0
+dry_run/synthetic | full_muon_adam | seed=289 | step=50/200 val=0.87915668 train_s=0.2 wall_s=0.2
+dry_run/synthetic | full_muon_adam | seed=289 | step=100/200 val=0.65556384 train_s=0.3 wall_s=0.4
+dry_run/synthetic | noflow_adam | seed=289 | step=0/200 val=1.0330251 train_s=0.0 wall_s=0.0
+dry_run/synthetic | noflow_adam | seed=289 | step=50/200 val=0.82523519 train_s=0.2 wall_s=0.2
+dry_run/synthetic | noflow_adam | seed=289 | step=100/200 val=0.28647181 train_s=0.3 wall_s=0.4
+dry_run/synthetic | noflow_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | noflow_adam | seed=289 | step=150/200 val=0.1882848 train_s=0.5 wall_s=0.6
+dry_run/synthetic | noflow_adam | seed=289 | step=200/200 val=0.16500198 train_s=0.6 wall_s=0.8
+dry_run/synthetic | noflow_muon_adam | seed=289 | step=0/200 val=1.0330251 train_s=0.0 wall_s=0.0
+dry_run/synthetic | noflow_muon_adam | seed=289 | step=50/200 val=0.88070276 train_s=0.2 wall_s=0.2
+dry_run/synthetic | noflow_muon_adam | seed=289 | step=100/200 val=0.65970216 train_s=0.3 wall_s=0.4
+dry_run/synthetic | noflow_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | noflow_muon_adam | seed=289 | step=150/200 val=0.32359266 train_s=0.5 wall_s=0.7
+dry_run/synthetic | noflow_muon_adam | seed=289 | step=200/200 val=0.19398412 train_s=0.7 wall_s=0.8
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | step=0/200 val=0.36756882 train_s=0.0 wall_s=0.0
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | step=50/200 val=0.2556032 train_s=0.0 wall_s=0.1
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | step=100/200 val=0.18102013 train_s=0.1 wall_s=0.2
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | step=150/200 val=0.13172477 train_s=0.1 wall_s=0.2
+dry_run/synthetic | deeponet_output_muon_adam | seed=289 | step=200/200 val=0.10591416 train_s=0.2 wall_s=0.3
+ok
+test_budget_and_architecture_local_dependency (__main__.Correctness.test_budget_and_architecture_local_dependency) ... SELECTED deeponet_adam: Adam=0.001, Muon=None, score=0.02
+ok
+test_diverged_formal_seed_block_is_not_replaced (__main__.Correctness.test_diverged_formal_seed_block_is_not_replaced) ... ok
+test_endpoint_extensions_both_directions_and_ties (__main__.Correctness.test_endpoint_extensions_both_directions_and_ties) ... ok
+test_evaluation_gate_cache_and_formal_seed_barrier (__main__.Correctness.test_evaluation_gate_cache_and_formal_seed_barrier) ... TEST deeponet_adam seed=292: 0.90717627
+TEST deeponet_muon_adam seed=292: 0.90717627
+TEST mionet_adam seed=292: 1
+TEST mionet_muon_adam seed=292: 1
+TEST full_adam seed=292: 0.5390563
+TEST full_muon_adam seed=292: 0.5390563
+TEST noflow_adam seed=292: 0.54895939
+TEST noflow_muon_adam seed=292: 0.54895939
+TEST deeponet_output_muon_adam seed=292: 0.90717627
+Analysis saved: /var/folders/mg/n1zzj66x65596150hws_z_tm0000gn/T/tmpdr5cunq_/analysis_partial; primary I n=1, status=exploratory_available_seed_subset
+Analysis saved: /var/folders/mg/n1zzj66x65596150hws_z_tm0000gn/T/tmpdr5cunq_/analysis_partial; primary I n=1, status=exploratory_available_seed_subset
+ok
+test_failure_cannot_be_silently_dropped_from_primary (__main__.Correctness.test_failure_cannot_be_silently_dropped_from_primary) ... ok
+test_frozen_id_and_seed_barrier (__main__.Correctness.test_frozen_id_and_seed_barrier) ... ok
+test_full_cosine_endpoint_both_optimizers (__main__.Correctness.test_full_cosine_endpoint_both_optimizers) ... unit | deeponet_muon_adam | seed=289 | step=0/20 val=0.36756882 train_s=0.0 wall_s=0.0
+unit | deeponet_muon_adam | seed=289 | step=5/20 val=0.34168252 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=10/20 val=0.32633976 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=15/20 val=0.32030495 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=20/20 val=0.31916931 train_s=0.0 wall_s=0.1
+ok
+test_guard_closes_test_before_provider_load (__main__.Correctness.test_guard_closes_test_before_provider_load) ... ok
+test_infinite_failure_is_not_missing_or_omitted (__main__.Correctness.test_infinite_failure_is_not_missing_or_omitted) ... ok
+test_interruption_resume_matches_uninterrupted (__main__.Correctness.test_interruption_resume_matches_uninterrupted) ... unit | deeponet_muon_adam | seed=289 | step=0/20 val=0.36756882 train_s=0.0 wall_s=0.0
+unit | deeponet_muon_adam | seed=289 | step=5/20 val=0.34168252 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=10/20 val=0.32633976 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=15/20 val=0.32030495 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=20/20 val=0.31916931 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=0/20 val=0.36756882 train_s=0.0 wall_s=0.0
+unit | deeponet_muon_adam | seed=289 | step=5/20 val=0.34168252 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | resuming complete checkpoint at step 5
+unit | deeponet_muon_adam | seed=289 | step=10/20 val=0.32633976 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=15/20 val=0.32030495 train_s=0.0 wall_s=0.1
+unit | deeponet_muon_adam | seed=289 | step=20/20 val=0.31916931 train_s=0.0 wall_s=0.1
+ok
+test_log_interaction_and_exact_wilcoxon (__main__.Correctness.test_log_interaction_and_exact_wilcoxon) ... ok
+test_lr_selection_seed_median_then_mean (__main__.Correctness.test_lr_selection_seed_median_then_mean) ... ok
+test_missing_synthetic_verification_gate (__main__.Correctness.test_missing_synthetic_verification_gate) ... ok
+test_numerical_failure_is_terminal_for_formal_seed (__main__.Correctness.test_numerical_failure_is_terminal_for_formal_seed) ... unit | deeponet_adam | seed=292 | step=0/20 val=0.90717627 train_s=0.0 wall_s=0.0
+unit | deeponet_adam | seed=292 | DIVERGED: injected NaN
+ok
+test_power_window_between_checkpoint_and_dry_reference (__main__.Correctness.test_power_window_between_checkpoint_and_dry_reference) ... dry_run/synthetic | deeponet_muon_adam | seed=289 | step=0/200 val=0.36756882 train_s=0.0 wall_s=0.0
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=50/200 val=0.29001562 train_s=0.0 wall_s=0.1
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=100/200 val=0.24261676 train_s=0.1 wall_s=0.2
+dry_run/synthetic | deeponet_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | deeponet_muon_adam | seed=289 | resuming complete checkpoint at step 100
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=150/200 val=0.20980395 train_s=0.1 wall_s=0.3
+dry_run/synthetic | deeponet_muon_adam | seed=289 | step=200/200 val=0.15943334 train_s=0.2 wall_s=0.3
+ok
+test_target_times_censor_and_failure_separate (__main__.Correctness.test_target_times_censor_and_failure_separate) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 10.406s
+
+OK

@@ -1,0 +1,30 @@
+{
+  "training_checks": [
+    {
+      "index": 0,
+      "generator_relative_l2": 0.0,
+      "refined_relative_l2": 0.000754979089833796,
+      "initial_max_difference": 1.421160339409866e-08
+    },
+    {
+      "index": 999,
+      "generator_relative_l2": 0.0,
+      "refined_relative_l2": 0.0006053979741409421,
+      "initial_max_difference": 1.472729094231795e-08
+    },
+    {
+      "index": 1999,
+      "generator_relative_l2": 0.0,
+      "refined_relative_l2": 0.0002653635456226766,
+      "initial_max_difference": 6.486145343043148e-09
+    }
+  ],
+  "targets_reproduced": true,
+  "periodic_features_checked": true,
+  "initial_condition_checked": true,
+  "source_training_sha": "a0fdf11ea1d356e369e82db8854f64249016ecf8ccfc7f182229800c882424cb",
+  "dataset_id": "b6cf6b04f50ec20b0a3de1c772f068797201e611a7be7e4f5938e18927bb61c6",
+  "test_model_evaluations": 0,
+  "legacy_test_opened": false,
+  "reference_limit": "Three training examples only; refinement measures sensitivity of the specified discrete solver, not a certified continuum error bound."
+}

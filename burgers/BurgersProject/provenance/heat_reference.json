@@ -1,0 +1,8 @@
+{
+  "source": "/Users/littledoraemon/Desktop/heat-project/results16/analysis",
+  "role": "previous frozen heat experiment, reference only",
+  "file_sha": {
+    "heat_primary_I.json": "b36e5e87560192091ba3943dff58673c2f0609fe9e9ac8946173b4cb4cd6ec51",
+    "heat_main_table.csv": "3f0b16bab02eb2295890502c862049f8579ded47af50f19db74b12a68777e854"
+  }
+}

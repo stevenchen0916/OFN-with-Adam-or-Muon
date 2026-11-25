@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "real_sources": 40,
+  "jacobian_autograd": [
+    {
+      "encoder": "branch1",
+      "layer": 0,
+      "max_absolute_difference": 2.9802322387695312e-08
+    },
+    {
+      "encoder": "branch1",
+      "layer": 1,
+      "max_absolute_difference": 5.960464477539063e-08
+    },
+    {
+      "encoder": "branch2",
+      "layer": 0,
+      "max_absolute_difference": 1.1920928955078125e-07
+    },
+    {
+      "encoder": "branch2",
+      "layer": 1,
+      "max_absolute_difference": 8.940696716308594e-08
+    },
+    {
+      "encoder": "branch2",
+      "layer": 10,
+      "max_absolute_difference": 1.7881393432617188e-07
+    },
+    {
+      "encoder": "trunk",
+      "layer": 0,
+      "max_absolute_difference": 8.940696716308594e-08
+    },
+    {
+      "encoder": "trunk",
+      "layer": 1,
+      "max_absolute_difference": 5.960464477539063e-08
+    },
+    {
+      "encoder": "trunk",
+      "layer": 10,
+      "max_absolute_difference": 2.384185791015625e-07
+    }
+  ],
+  "active_gates": 21,
+  "allocated_gates": 24,
+  "inactive_gate_gradients_absent": 3,
+  "diagnostic_model_optimizer_rng_unchanged": true,
+  "resume_matches_uninterrupted_model_optimizer_scheduler_rng": true,
+  "steps_tested": 3,
+  "source_hashes_unchanged": true,
+  "limitation": "Only 3-step continuation verified locally; 20000-step continuation not yet executed."
+}

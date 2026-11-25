@@ -1,0 +1,11 @@
+Using backend: pytorch
+Other supported backends: tensorflow.compat.v1, tensorflow, jax, paddle.
+paddle supports more examples now and is recommended.
+test_forward_backward_and_full_noflow_shared_normalization (__main__.WideModels.test_forward_backward_and_full_noflow_shared_normalization) ... ok
+test_optimizer_coverage_and_routing (__main__.WideModels.test_optimizer_coverage_and_routing) ... ok
+test_parameter_budget_and_output_rank (__main__.WideModels.test_parameter_budget_and_output_rank) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.452s
+
+OK

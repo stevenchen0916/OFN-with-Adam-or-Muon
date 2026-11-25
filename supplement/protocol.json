@@ -1,0 +1,19 @@
+{
+  "version": "heat-supplement-20261118-v1",
+  "groups": ["full_adam", "full_muon_adam", "noflow_adam", "noflow_muon_adam"],
+  "seeds": [292, 293, 294, 295, 296, 297, 298, 299, 300, 301],
+  "original_steps": 20000,
+  "total_steps": 40000,
+  "continuation_schedule": "Hold each optimizer at its actual step-20000 learning rate (0.01 times selected initial rate); preserve model, optimizer and RNG states; do not step or restart the old cosine scheduler.",
+  "validation_every": 500,
+  "checkpoint_every": 1000,
+  "diagnostic_every": 5000,
+  "diagnostic_samples_per_encoder": 4,
+  "gradient_probe_functions": 16,
+  "gradient_probe_coordinates": 128,
+  "probe_selection": "Evenly spaced fixed indices of training data for loss gradients and validation data for layer Jacobians; no test access.",
+  "jacobian": "Post-ReLU complete hidden layer, including input normalization, actual rectangular rotation map, bias-dependent ReLU mask and active Flow gate. Full singular spectrum and radial response saved for each probe. Also save pre-ReLU spectrum.",
+  "interpretation": "Exploratory diagnostics and fixed-endpoint-LR continuation sensitivity. Not a new independent test, a proof of convergence, a causal mechanism intervention, or a retuned optimizer comparison.",
+  "workers": 4,
+  "threads_per_worker": 4
+}
