@@ -1,0 +1,636 @@
+{
+  "jobs": [
+    {
+      "group": "deeponet_adam",
+      "seed": 292,
+      "checkpoint": "deeponet_adam_292.pt",
+      "checkpoint_sha": "baba4250f8787efc04f1cf0d6a4c22f4181d322afb0142226d18fa0a8ca84359",
+      "published_evaluation_key": "027d225466c49eab6691c8c51240d8ef3c79583414e982a18d0c8ec346caf85c"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 292,
+      "checkpoint": "deeponet_muon_adam_292.pt",
+      "checkpoint_sha": "545e0bf29ccae587d94d8e1ad8183a8b2baca1737039c22cbe68849d3dde6985",
+      "published_evaluation_key": "31d5ec804bb9c15251e7541ee27cee591326941d289359b9af1d372fdb5afb41"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 292,
+      "checkpoint": "mionet_adam_292.pt",
+      "checkpoint_sha": "e7db18600842e26589a5bd01369879077690350d1a47a215f29c22669d0361a6",
+      "published_evaluation_key": "004b03f6b658fb04f79a11886934290b2e05125d5c0bf28187cdca31daa50cd9"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 292,
+      "checkpoint": "mionet_muon_adam_292.pt",
+      "checkpoint_sha": "ca75868db6f500a421cd881ac06286dd00fde28ac343791489b081708c281ed9",
+      "published_evaluation_key": "e480ebd884e470a0cd546c9e00296f019a4d5d80cd2da987510518b09f1d6ee2"
+    },
+    {
+      "group": "full_adam",
+      "seed": 292,
+      "checkpoint": "full_adam_292.pt",
+      "checkpoint_sha": "ec387618e28ebd5365fce384b4db877d133e39d503ea7cb094b14e26e4402e62",
+      "published_evaluation_key": "212cd4d61ec4b5625a1898c964a09bcdeabc561e16972b09e7516bb5983050f2"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 292,
+      "checkpoint": "full_muon_adam_292.pt",
+      "checkpoint_sha": "3c5c2768119c67401c5d267155db7050225bf96f2c7a4013ffea32ad40549a37",
+      "published_evaluation_key": "b1a8c80df31403ca953fe0d20ad5698e37b019b385a31c82e949c6e5f7857d06"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 292,
+      "checkpoint": "noflow_adam_292.pt",
+      "checkpoint_sha": "d1fc2fe6b2930594b711e1e9edcaa8a7b66340868719a2a4e6213b94d6db2841",
+      "published_evaluation_key": "e620f37e2f6bc1b3ed154529838e0aca7c6f8f56790f0070f035a3a9353db634"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 292,
+      "checkpoint": "noflow_muon_adam_292.pt",
+      "checkpoint_sha": "d11ea86108ea951d7542bf83d6d8a6c454c314a503f539794453cdedd0ef3e63",
+      "published_evaluation_key": "e3d36009a60b18144c5643b21358e32f325cc12c65b19e583f554f040deefd46"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 292,
+      "checkpoint": "deeponet_output_muon_adam_292.pt",
+      "checkpoint_sha": "b3cf2ba3047de6142601d810af640c848ce9cd1fc9f6263e7ceeabbe39a7ae4d",
+      "published_evaluation_key": "fa766dfc62c8da6bc2e361f0d8768cc1f09414fab9575c44d549f84ade21d49e"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 293,
+      "checkpoint": "deeponet_adam_293.pt",
+      "checkpoint_sha": "497fb47294c213b98a68deae862746f762809a6995fbdbb9afe1a8ed62eee551",
+      "published_evaluation_key": "a260df40e8c108a74bbf858e372a92c7029719f0382890671797cd2eae4c48cd"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 293,
+      "checkpoint": "deeponet_muon_adam_293.pt",
+      "checkpoint_sha": "b123fc766cd4eff51ece74d7b3a134a7d225075012ff5b19906f20ed8a8c06ee",
+      "published_evaluation_key": "dd7e0ade2cba73417c56410f088ba12332e29943fd57bcbea22de5513066824a"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 293,
+      "checkpoint": "mionet_adam_293.pt",
+      "checkpoint_sha": "ebc850825647c01da754e0ff80c2c738d0efd1d58831efdef7c85da5cba66881",
+      "published_evaluation_key": "0026a1bad4a57c19395e1bf726135d4010774603101fb8b4cb792563ba348464"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 293,
+      "checkpoint": "mionet_muon_adam_293.pt",
+      "checkpoint_sha": "414e3874f94825297579c832aba59868e21a209781f4f7931e737358a0c9b17c",
+      "published_evaluation_key": "31e462d41b324f11720385586c9718ada4056576e495c035ab0bf2fd95329b98"
+    },
+    {
+      "group": "full_adam",
+      "seed": 293,
+      "checkpoint": "full_adam_293.pt",
+      "checkpoint_sha": "a32cd44f5c344b6bc063a501a1a445d78dd333ed1faa126af4f66a2861479df6",
+      "published_evaluation_key": "942bf24b35c41258f9f8da94006f1344ff2a9b9c50c1b9ecad3011fa485019cb"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 293,
+      "checkpoint": "full_muon_adam_293.pt",
+      "checkpoint_sha": "6d6d36e22a98a441f5247180b7a450587a866612bf8b41c253d4cc090550897a",
+      "published_evaluation_key": "074f0741893540e6a39f0ecece0d21fea26f4e8d0e0a10f30fc0df5bd7797809"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 293,
+      "checkpoint": "noflow_adam_293.pt",
+      "checkpoint_sha": "b2933c603f9617b45f435f000d912c5b44d31c8fa304f6fe1509b7a80a5a39d5",
+      "published_evaluation_key": "3c0ec5c3491fdcda602da197c20f714b06abb7a1d0f8af4c29514bc2cb0a3708"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 293,
+      "checkpoint": "noflow_muon_adam_293.pt",
+      "checkpoint_sha": "17cad9ff8b44c633a13491ce800c56ab777e9dba33e46d46c0c3abc8e07a8dba",
+      "published_evaluation_key": "fea87ea0808b60059c51708d629dc6de3ef852a75c8ba0f513534ab9b7989a35"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 293,
+      "checkpoint": "deeponet_output_muon_adam_293.pt",
+      "checkpoint_sha": "ae3d576e8ada0544b3184d928af3e192f29837944fbdddf19ebdd1e212f60a20",
+      "published_evaluation_key": "a97267d309adf4abc0a9f2afeeb1ffe9067a9597f264d9b80a26063c54d9a90b"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 294,
+      "checkpoint": "deeponet_adam_294.pt",
+      "checkpoint_sha": "fde26969c40da2f4adb345cd790a9070ebcaf9d08fe58f7bc191506227cf7776",
+      "published_evaluation_key": "cafdecc2185f886561a40e91456af27bd6d60e27b3a6d1a2210b09fd100436a4"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 294,
+      "checkpoint": "deeponet_muon_adam_294.pt",
+      "checkpoint_sha": "a7758cfcc6886691a5b2d8abc475559c52927bb5089dc55302e569e9552c59f5",
+      "published_evaluation_key": "24ffff3fcaf62d2b6783b5ce98c18765e54356d5fe693287486e5638fc407470"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 294,
+      "checkpoint": "mionet_adam_294.pt",
+      "checkpoint_sha": "827ef67eb7599efcd17fd4b9ea208c954fcd0ae60ab3f6fbae96bddabc688ff7",
+      "published_evaluation_key": "57537e2f997a71e32274bea770907e155de2f609a6a2b311bf26e9b1b8b7f2c4"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 294,
+      "checkpoint": "mionet_muon_adam_294.pt",
+      "checkpoint_sha": "a6b265c0a3e22c3e443316e78e9d70b4dc0ab447f9282b18ad58a5cdd7e523dd",
+      "published_evaluation_key": "1456c207e89f23985868926966280b40e12b6550756061f5beeb906c8b54347a"
+    },
+    {
+      "group": "full_adam",
+      "seed": 294,
+      "checkpoint": "full_adam_294.pt",
+      "checkpoint_sha": "e15cf8982737d957adafd239e3679c485d1500a953e2fd3869da2bad57086953",
+      "published_evaluation_key": "16d554de8260509d12277705882fa3d8fb01790d0692acff4cd1c70745602647"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 294,
+      "checkpoint": "full_muon_adam_294.pt",
+      "checkpoint_sha": "614c00eee5b88cb1da52dbc1921268238d39484391e0ea6be0e8813c246fa20d",
+      "published_evaluation_key": "94f259bc5f555fd84c8bbe8c70128af927a46c33ca158a254afacc74be580deb"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 294,
+      "checkpoint": "noflow_adam_294.pt",
+      "checkpoint_sha": "6dec82a7559d91b98906ed27f2900264ea82b45675c2e7c6aa84f43045880d3e",
+      "published_evaluation_key": "fb76a52d2008acd89ca8d141ecd7889460d8db4178b6cfb668ca94b476800b42"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 294,
+      "checkpoint": "noflow_muon_adam_294.pt",
+      "checkpoint_sha": "02e41e89180bb77585a7d88f86051a0afd6bdef41af012d315842193093397a6",
+      "published_evaluation_key": "8d233a1259aa7060619afa1cfa54109d110089b798964119da520c3d36193fde"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 294,
+      "checkpoint": "deeponet_output_muon_adam_294.pt",
+      "checkpoint_sha": "4268664333d123e9332ad50bb9453b5f8b94c0271cbca3d7f00d2d4d10c544e9",
+      "published_evaluation_key": "96f63c5684b2c0d3b8718848d4680843d8c7da7e1bd3b9de7b1173754892f2a9"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 295,
+      "checkpoint": "deeponet_adam_295.pt",
+      "checkpoint_sha": "f173773dae5dcf5db2473cfa33328cf10b1be99d436fb6e15c3612e61a467739",
+      "published_evaluation_key": "229ad501107b75646ca36cd97c311f5f672d1caaaa31040d287372ff1126c1c3"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 295,
+      "checkpoint": "deeponet_muon_adam_295.pt",
+      "checkpoint_sha": "278fd186a5c5be051fe261a69c45c4825f8cbdbaed11aa0bc46b7e5521cf5538",
+      "published_evaluation_key": "a5bb20cb380c2bbb132989f43f00be2c512a22f8a48ecbc953d65a713ed8b08f"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 295,
+      "checkpoint": "mionet_adam_295.pt",
+      "checkpoint_sha": "827a2412938dc806681e9b57379d06d95aa0716778fb3190f8b6eecf1275ef59",
+      "published_evaluation_key": "e85b9d4e141bcb9d20da4563b1035938083a4a2fe9f94bc15a1bf9f0d551b195"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 295,
+      "checkpoint": "mionet_muon_adam_295.pt",
+      "checkpoint_sha": "560aa5a87a7a724514a4ef241adf06c0622988fad0f48d1edc55770ae79ab3af",
+      "published_evaluation_key": "bfc2e8f7e963baa246ec3cde60d116689379c281e1fd768579aec4d01a102fa2"
+    },
+    {
+      "group": "full_adam",
+      "seed": 295,
+      "checkpoint": "full_adam_295.pt",
+      "checkpoint_sha": "a5b4a4bbfa1378d26c1f9f52d2fa888489d59fe10c35ed5b098d3c4ccc13a552",
+      "published_evaluation_key": "a96d20b7c20bef3073a95d073f90cc1417336522d877a927a136f681c46df9ae"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 295,
+      "checkpoint": "full_muon_adam_295.pt",
+      "checkpoint_sha": "af062e8efc63e28ee18930d18f33cf7ab018a9be3226f588c92e6822259783be",
+      "published_evaluation_key": "5edfaffd907e1f9f349f97624bd63c9e08ef7c65c7e5567584d6dc7cdfdee146"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 295,
+      "checkpoint": "noflow_adam_295.pt",
+      "checkpoint_sha": "24e1c95838d42e5ccfd34c79282e8739c5965f3b415c3b0f8fab1ad5e8bc7926",
+      "published_evaluation_key": "7d2e2337aa8fc819ce10a474ce176e8e92942f571eb0a6ed0b2a9a72edc562cb"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 295,
+      "checkpoint": "noflow_muon_adam_295.pt",
+      "checkpoint_sha": "ead92e35ef59e38fa51b9c12a5b43a22f5ba819465ee55fe038f902d648103d3",
+      "published_evaluation_key": "259bd0c83981946beeda1417b8f392dcf2d267c735cc1113ab9af6341a96cf35"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 295,
+      "checkpoint": "deeponet_output_muon_adam_295.pt",
+      "checkpoint_sha": "dde9dbe2b8029bbef3558fd61430ac318f78868d273caad53e1af41bad48065b",
+      "published_evaluation_key": "f2f51c2e049e1cdb5f8bafe1c366ff82f743c068c0c6ee55f107c9efff5a7882"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 296,
+      "checkpoint": "deeponet_adam_296.pt",
+      "checkpoint_sha": "0dc668d532c74602d843e9aee03759159e7c446d7339dfb46f7843c7701af01b",
+      "published_evaluation_key": "425646942f374d8841b9cd1bce70a63dda9eaf7b540a10ca06906b72e733a175"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 296,
+      "checkpoint": "deeponet_muon_adam_296.pt",
+      "checkpoint_sha": "c5cb518d90a627dab09892d395463bf0c6f5a53658986f424e6d2728637490d3",
+      "published_evaluation_key": "c499fad2bc47647de08f2708806a7d05e9f30a035739c84691e638da6b9918f6"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 296,
+      "checkpoint": "mionet_adam_296.pt",
+      "checkpoint_sha": "acde1bfdad6813e15848f2ce099f7c4e15570326701e1e31333a9bfc2d9b99e2",
+      "published_evaluation_key": "4b4a00063f6b1cf8f0cb73726bec3db8d446503ed88006df6b7dc804e49d2757"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 296,
+      "checkpoint": "mionet_muon_adam_296.pt",
+      "checkpoint_sha": "57f40d86e9bcf54ee5ec33d3f42d3ae759f0be90a561081880b48ba77ff6ae7c",
+      "published_evaluation_key": "87dc6066b0ba430723c47668310f23ae5551beda52f0d478cc4550f54ed3e545"
+    },
+    {
+      "group": "full_adam",
+      "seed": 296,
+      "checkpoint": "full_adam_296.pt",
+      "checkpoint_sha": "57feef406fecb44778237d67a8cd47b44965ded64a0d57f984fabf98997726ea",
+      "published_evaluation_key": "27661ac90750f3c4a91ec9f97d57d4e802165ee384b6b7aa9786e13cb67fdbcb"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 296,
+      "checkpoint": "full_muon_adam_296.pt",
+      "checkpoint_sha": "9311057121725a35f525eec0a8787227fb6cd71e278acac7cf2d23d222bb926b",
+      "published_evaluation_key": "e7120f67378e225e4eb4447f16df99e2e794f42d55a48d567e66a84566431526"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 296,
+      "checkpoint": "noflow_adam_296.pt",
+      "checkpoint_sha": "35b52cece76188f134467394a0f705eb32cba67f243ef56a48f1003e1fd1db2d",
+      "published_evaluation_key": "753686cda8c048a091cdf82018ed42fdceec0ab3400aa0440213773c4163f7ca"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 296,
+      "checkpoint": "noflow_muon_adam_296.pt",
+      "checkpoint_sha": "f6d2874ebc1034ae4745f75cb96faae631487a27c1707ae84e6515c68ade93a6",
+      "published_evaluation_key": "325fc559844e589e9d56bf45c026a8161e3f6c886757a9d4bf0b203d276ed7fb"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 296,
+      "checkpoint": "deeponet_output_muon_adam_296.pt",
+      "checkpoint_sha": "6020d6f452fc7d14d3911114675d08cd0be59ad88caedcec31d931fe2ad76ed5",
+      "published_evaluation_key": "ce693a81c4a6aaa730ad2b1f792581743579488198c4ebe3646cdb978f02ef6e"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 297,
+      "checkpoint": "deeponet_adam_297.pt",
+      "checkpoint_sha": "a7da96049e9a3111f5144adf60edc8c89e5c2d50cc0b6df718557e1eb475e697",
+      "published_evaluation_key": "9e48a8f7b6199582977d5ce07309c70922883348cb7c361c88d0a32e6a1ab5d1"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 297,
+      "checkpoint": "deeponet_muon_adam_297.pt",
+      "checkpoint_sha": "f32340ecb4b654fd6a84b7dc9fbd2020a149974db697230c6877149a0d5f9c37",
+      "published_evaluation_key": "8575ed67da9a7f455618048b2dcae6e3145cea43682197b4b790d47985a6e3a4"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 297,
+      "checkpoint": "mionet_adam_297.pt",
+      "checkpoint_sha": "d890cbc7e65fc4279fe87054cccc55e0654797b08ad87f19f1f537c2fd6d5633",
+      "published_evaluation_key": "aa9678ed8e59ac7af88d1991de7d90d9f1809a0ceadebc6204fd4236c7c9b5c9"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 297,
+      "checkpoint": "mionet_muon_adam_297.pt",
+      "checkpoint_sha": "8313fc162f7718194439374010abfbe2d005ebba9870349f5abc37d5f8811087",
+      "published_evaluation_key": "8771a52b39c6c05d05268559941f4f90362ce6694ea2b4a6c9722edb5fcb619f"
+    },
+    {
+      "group": "full_adam",
+      "seed": 297,
+      "checkpoint": "full_adam_297.pt",
+      "checkpoint_sha": "d3d33983256624b4b3d3ee2bc70cfb6a87434c7ded243ade9f493c7bf1084c8e",
+      "published_evaluation_key": "dce39c46ab96582e4da03926051defa36c1242a2379a0e75b4128e5a9471f42b"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 297,
+      "checkpoint": "full_muon_adam_297.pt",
+      "checkpoint_sha": "f44a2d42dcfcd36734cc62d5436d786e199730c2e3d8ececf6f8dbb971b86323",
+      "published_evaluation_key": "d85f46f4d10f8e0bef62307e13327bfc8c936b039a7a64f2bc96797e7e6a7ac7"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 297,
+      "checkpoint": "noflow_adam_297.pt",
+      "checkpoint_sha": "f914b749a4868e7312c023eeb255305b8d5d61c9036755675e72e2d2606bed3a",
+      "published_evaluation_key": "5155552111585c4487f863aef2b951e62e08f38629cf016ad979d40fa9f0babb"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 297,
+      "checkpoint": "noflow_muon_adam_297.pt",
+      "checkpoint_sha": "043c30ebd68ca8ee38e09a39ce3c492ecc4322dc891692a7f369b8096ab2126c",
+      "published_evaluation_key": "2b8f2a5fb20e68abec60cdd28d8340e2642e70b0c89992ae6828d8e8b9a0915b"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 297,
+      "checkpoint": "deeponet_output_muon_adam_297.pt",
+      "checkpoint_sha": "5ca7dd56c6aa793c92118e9ee85304467b660a39aedb91ae6ae9f1630cb61568",
+      "published_evaluation_key": "8ca0ae7558fc450167a27d89108063a86d46f5438ddf4db27243137924acb511"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 298,
+      "checkpoint": "deeponet_adam_298.pt",
+      "checkpoint_sha": "31adc07f306925fc685c2b2ab3de618326b315fcae502fc00467ed3defe08328",
+      "published_evaluation_key": "8a379de46869f40ebe3b677c8f235f72d0256af2889267238771907fdb77c9fb"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 298,
+      "checkpoint": "deeponet_muon_adam_298.pt",
+      "checkpoint_sha": "4313e7b9e4df6ccac29d191868e3c0a7c93f7fa698b666f64feae6266654bfba",
+      "published_evaluation_key": "33e622e3e04ed121362224d317559e90ed286f328e99fa07539b135e421e9ce2"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 298,
+      "checkpoint": "mionet_adam_298.pt",
+      "checkpoint_sha": "c56daeb1c5638fbe045c2b16f786d3b23c1c9fb1c99a0c109bc31b87a5b3390a",
+      "published_evaluation_key": "346b48424edd093114007fd5ab0eda5c4540f6964a8968913386c9679f9e0dc4"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 298,
+      "checkpoint": "mionet_muon_adam_298.pt",
+      "checkpoint_sha": "d7201ef92d8f9b9a1b85632f3a2c3ebf68571ed9b6ce0fbc2c1fb4118e4b00cf",
+      "published_evaluation_key": "05143c538763f5be894e907302b493c305b9aa41de1923b4558f25327562593b"
+    },
+    {
+      "group": "full_adam",
+      "seed": 298,
+      "checkpoint": "full_adam_298.pt",
+      "checkpoint_sha": "637d6bfe9571e630874ba733b9dabef0900f849a20b17e555899ae95216f3d56",
+      "published_evaluation_key": "42286d424062a0e7c57a6890bbc62008845a13e3b81d66a61e0ec4fb51fd920f"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 298,
+      "checkpoint": "full_muon_adam_298.pt",
+      "checkpoint_sha": "19329b3239cb34d628864044014d5041940f1ac537bea1e3a4649a22607d62bf",
+      "published_evaluation_key": "7a05a310e2c39dcc09eb95c2ad92e713d9c6e789049aea256cb793b07b3a89a5"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 298,
+      "checkpoint": "noflow_adam_298.pt",
+      "checkpoint_sha": "00a025ffef01f7e7a408693f21bf43cdf981fb25cf5e365e82168d635aaf0472",
+      "published_evaluation_key": "67c4372854c12c5fcf360791e712858b73140d1e08b751a35094fc1960f19636"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 298,
+      "checkpoint": "noflow_muon_adam_298.pt",
+      "checkpoint_sha": "6531269a80c230c6509195c20fe768206960f0e97f8918afb07e0814c8a8f944",
+      "published_evaluation_key": "ee2373ff2d1473bdbb1fc9efc876b8bf5bae1d23a9829c69ce3d747b806cf6c0"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 298,
+      "checkpoint": "deeponet_output_muon_adam_298.pt",
+      "checkpoint_sha": "36ea5cccfa0e70114b51fe81821b6910bf831c39e43c86640d5138e99dd739c0",
+      "published_evaluation_key": "62297a49db989f7e28db540d3addfadf6011cf16d888fc53e6828ae85bb7705b"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 299,
+      "checkpoint": "deeponet_adam_299.pt",
+      "checkpoint_sha": "56370b6ec2fdb5818fb6b2f5d0a7631db420a574dd8b0c642df76eb497af38dc",
+      "published_evaluation_key": "bf1306917c31697bc273f61c5fa02c121837d7ce14377f08b93f5ea629150c92"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 299,
+      "checkpoint": "deeponet_muon_adam_299.pt",
+      "checkpoint_sha": "35e83ae93262c7bb3d192cb8472061ecda852a2556805ab079f5282c31d4be49",
+      "published_evaluation_key": "81410b6b6481461200b43138331a9f62115066f568071901001b3aeb961d9099"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 299,
+      "checkpoint": "mionet_adam_299.pt",
+      "checkpoint_sha": "f4249bf2769cf690b2c4d53059740db05f82384bcdc5e1481655cde7bdd57e8a",
+      "published_evaluation_key": "83f734520233f68ef51e7c15a978a448b824487ded232cee7c0a90b6e815ff56"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 299,
+      "checkpoint": "mionet_muon_adam_299.pt",
+      "checkpoint_sha": "595e20aabaecf347df350dffc4a4870ba0c8e9c4ea8b5986acb6d6da7af8d7df",
+      "published_evaluation_key": "dd424993624a69ca0151f5ed893c883151768f04f157fec376e01f9fd62ca9d1"
+    },
+    {
+      "group": "full_adam",
+      "seed": 299,
+      "checkpoint": "full_adam_299.pt",
+      "checkpoint_sha": "5a4456a8a6b1555aa60d73efd7886b386b7e17676d11fedda6e4e07e104bd4b3",
+      "published_evaluation_key": "d821eef480930c187ceb66029d1086b557a2eec9383293dd29bd9b54e6dffb4d"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 299,
+      "checkpoint": "full_muon_adam_299.pt",
+      "checkpoint_sha": "f60452332a50b30137908f3fc89bbcb31a4c6406ba4ff688a2ba2748d4d13baa",
+      "published_evaluation_key": "fb9914a994e54927ca8684d2c13692621a983521417ed732a29978a26c169c67"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 299,
+      "checkpoint": "noflow_adam_299.pt",
+      "checkpoint_sha": "31589ba60ed79376c884b1aebf0ad9d17efa6309e3c03979c5c1bfe58d1855c4",
+      "published_evaluation_key": "ccf5d6be531dbf31a2d0d656d614abd41fe16b2f8499a2ef665a945b38e9cea1"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 299,
+      "checkpoint": "noflow_muon_adam_299.pt",
+      "checkpoint_sha": "e2840ff1cb440cec52f516d7145d4eab4bbd34bd4ca7a5b8dc84b06cf8334ca2",
+      "published_evaluation_key": "fbea0d53ddc0b4d2a31b8ed06de52a5fa92bd5f053e8ff251757cdfc60ad9868"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 299,
+      "checkpoint": "deeponet_output_muon_adam_299.pt",
+      "checkpoint_sha": "21c30b976c86533fd5d3cbff9adfe2bae1c642756ecba377bf63fd88e3106f32",
+      "published_evaluation_key": "42dd81654e037b0b30864a75e9a74a2686bb521d484c4d5109ed1fc2d52ff25f"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 300,
+      "checkpoint": "deeponet_adam_300.pt",
+      "checkpoint_sha": "cb4741e7f7821025345373aea2c848906d0b3cf64eccc19d49153489a15a0581",
+      "published_evaluation_key": "3e8fe966279c5be9a0f39665e9a88a415c24677b575fc55efda5f72da16dace7"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 300,
+      "checkpoint": "deeponet_muon_adam_300.pt",
+      "checkpoint_sha": "44d65eaf284f4b87698225cb61cf4f3d6f5d295b3e4522838bdd30f1d618703a",
+      "published_evaluation_key": "55bf01cdb2df9306bb68427910d25fab0fd9d32cdf11ed39cc2c3d26357ede89"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 300,
+      "checkpoint": "mionet_adam_300.pt",
+      "checkpoint_sha": "903effa3cdc88fafc2ee058f88ea02d654c4e7e1b68a662ec452099bdb11e3e9",
+      "published_evaluation_key": "6e2958af639dc65f0bf3e1e168e58c088223ebb3365d803ef60e8220abd6b1c2"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 300,
+      "checkpoint": "mionet_muon_adam_300.pt",
+      "checkpoint_sha": "51d6f8ea74fccbff96731ec75264b904ca6199e84b82154e0de3fb432e116169",
+      "published_evaluation_key": "12b1ab06a9b0449a9af1efae0f5eca592a3c2eb2670d44d42aa8e2eff963acf6"
+    },
+    {
+      "group": "full_adam",
+      "seed": 300,
+      "checkpoint": "full_adam_300.pt",
+      "checkpoint_sha": "0d313a31e1ac4ccbcd6fd1d9c8c39508291777ba7eacdcaf649d67fd403c6b60",
+      "published_evaluation_key": "18d51261dd5a639cf845aeaa47977a9b5688eac8262ac2d73f1159edde395e94"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 300,
+      "checkpoint": "full_muon_adam_300.pt",
+      "checkpoint_sha": "28ff9bb893ca5216bd181509c54a6c30419be7d5beccf4ca976f7eb3ca8670e2",
+      "published_evaluation_key": "3ca808718ade3f584f327fbbcd2ac4dbc009fca6ea8b70ebcedf10a089c5d0bf"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 300,
+      "checkpoint": "noflow_adam_300.pt",
+      "checkpoint_sha": "d951fee26139f35dbdc5bdb22e2a8a5d772e3343cd71385472f609909e9732ea",
+      "published_evaluation_key": "f52cb8ec80ff5647101e88bb36a1432dba8bd5a01aaf487edc9da8a7b81d66ef"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 300,
+      "checkpoint": "noflow_muon_adam_300.pt",
+      "checkpoint_sha": "8d927d385d85d4353c8c48f49692bd14f88237e1a6b2e82c1206184b62195805",
+      "published_evaluation_key": "c4003d4080bb0cd7048b948639a0b585a03c3e9d57f9d0f56fcd8a70aa6044a2"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 300,
+      "checkpoint": "deeponet_output_muon_adam_300.pt",
+      "checkpoint_sha": "780fa28aaf63e11fc51ee6921b86fcf86e3faa85d0f0e88a04fe2cde3e0d590f",
+      "published_evaluation_key": "c1d3b701442c2d46a300285c6674238954bda03ef77427efc2cd5b769ef6ac9d"
+    },
+    {
+      "group": "deeponet_adam",
+      "seed": 301,
+      "checkpoint": "deeponet_adam_301.pt",
+      "checkpoint_sha": "012346ce8c6a49013ff5560004984770f917ce43cdbd3ecf899012a749018a0b",
+      "published_evaluation_key": "87e8acb2ec58f6a10fdee3e7102ee2b9beeb7d1b82570e4af2de1b66b398cf78"
+    },
+    {
+      "group": "deeponet_muon_adam",
+      "seed": 301,
+      "checkpoint": "deeponet_muon_adam_301.pt",
+      "checkpoint_sha": "cd1b26ad46d490f66a10abfff8c53579b959539736b5610706898f425940a32a",
+      "published_evaluation_key": "45b94ba6a2b8dada3b1bd9d48ff34263bdac76af868ff764ee82eeb5d136ccd2"
+    },
+    {
+      "group": "mionet_adam",
+      "seed": 301,
+      "checkpoint": "mionet_adam_301.pt",
+      "checkpoint_sha": "5524629a6424643e947528858d5fee71ba60f548bc8d73fcc80b78bbd32aaf70",
+      "published_evaluation_key": "43b5b45bfdc746e66c6097f965d8ff12d107aab61fdd005745034e597e321480"
+    },
+    {
+      "group": "mionet_muon_adam",
+      "seed": 301,
+      "checkpoint": "mionet_muon_adam_301.pt",
+      "checkpoint_sha": "a9953a4fa65d0d99e6c8b20e5d3712533614798783f62b876542198f67bd67fd",
+      "published_evaluation_key": "47b85aace73944e37fde28c185e892496d5cac990668e9ffcad7d70fff288c74"
+    },
+    {
+      "group": "full_adam",
+      "seed": 301,
+      "checkpoint": "full_adam_301.pt",
+      "checkpoint_sha": "0bf9418af755e61d31a65109fcb928de9098e1c34c3882e30b004416a0f203e0",
+      "published_evaluation_key": "0231b3afae15840d5f313d4f25431155849dd154137d09e984f38a35101f9198"
+    },
+    {
+      "group": "full_muon_adam",
+      "seed": 301,
+      "checkpoint": "full_muon_adam_301.pt",
+      "checkpoint_sha": "d46d587ca70db424f5c485bef4a5271c7fbf79fd2e5b0c8c8cfe7f44a416415f",
+      "published_evaluation_key": "d2b3c8786803594c2da94bf7b112a7618dc8abb2f916fdb83cb980b1da591844"
+    },
+    {
+      "group": "noflow_adam",
+      "seed": 301,
+      "checkpoint": "noflow_adam_301.pt",
+      "checkpoint_sha": "b9bbc36b66e1843eb6d1da646b3204a1323bf1cf1a239bc09b27c38bae005460",
+      "published_evaluation_key": "b6bb1fa959b27cb63ab347c4d6dc11aa93609b6855d88c61ae0953537a72cfb5"
+    },
+    {
+      "group": "noflow_muon_adam",
+      "seed": 301,
+      "checkpoint": "noflow_muon_adam_301.pt",
+      "checkpoint_sha": "27c609381d1476506cb8b8c690513e467d0dc0983613e3f5d72683c45d34887e",
+      "published_evaluation_key": "86fb6f7287ffce960731278328659321807beefe8df76bf39b898d99cd285538"
+    },
+    {
+      "group": "deeponet_output_muon_adam",
+      "seed": 301,
+      "checkpoint": "deeponet_output_muon_adam_301.pt",
+      "checkpoint_sha": "c91a3e9ed50187b71dcda233b3978a448fc01cc529df3a0eae2b0ae7c77ad6ab",
+      "published_evaluation_key": "7321b6889f51c51db3920c9e0c72301d39cdcafaa7c1a337421be32363570d3b"
+    }
+  ],
+  "preprocessing_sha": "13d96d6d9e0722508ba158e2210293ddd4fa4547391690e9116b52b72a8f55f8",
+  "published_scores_sha": "002f67827178c9c70992331ce4c32cb0933dff6fc268ce4caf88681dbde108ff"
+}

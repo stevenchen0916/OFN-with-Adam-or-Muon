@@ -53,3 +53,9 @@ The archived protocol is in `heat_formal_v3_16/protocol.json`. The distributed d
 The [Burgers dataset](burgers/data/) contains 1,800 training cases, 200 validation cases, and 200 independently generated test cases for the forced periodic viscous Burgers equation. Each case includes 13 initial-condition values (`x1`), 13 forcing values (`x2`), and 2,500 reference solution values (`y`) indexed by the query features in `xt`. The directory also includes the training-derived normalization bounds, the split indices, and the checksummed dataset manifest.
 
 See the [formal protocol](burgers/protocol.json) for the dataset definition and evaluation design. The [Burgers results](burgers/results/) contain the 90 run-level test results, paired contrasts, validation curves, and learning-rate search and selection records.
+
+The [Burgers training entry point](burgers/BurgersProject/run_campaign.py), [paired analysis](burgers/BurgersProject/burgers_formal16/analysis.py), and [report generator](burgers/BurgersProject/report.py) accompany the published results.
+
+## Additional OFN controls
+
+The [revision instructions](revision/README.md) describe grouped Adam, joint and common learning-rate settings, normalization and fixed-gate controls, and the longer cosine schedule. From a clone, submit from the repository root with `bash revision/submit.sh`. The [leave-one-seed-out table](revision/burgers_leave_one_out.csv) uses the original Burgers results. The fresh heat evaluator uses the [90 original checkpoints and their checksums](revision/original_heat/index.json). New training and fresh-test scores are generated on the compute node.
