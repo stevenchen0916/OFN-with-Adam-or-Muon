@@ -13,15 +13,16 @@ py="${REV_PY:-$HOME/HeatProject/.venv/bin/python}"
 export DDE_BACKEND=pytorch CUDA_VISIBLE_DEVICES='' PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4
 export MPLCONFIGDIR="$PWD/.mplcache"
+scope="${3:-core}"
 case "$1" in
   smoke)
-    "$py" revision/campaign.py heat smoke
-    "$py" revision/campaign.py burgers smoke
+    "$py" revision/campaign.py heat smoke --scope "$scope"
+    "$py" revision/campaign.py burgers smoke --scope "$scope"
     ;;
   tune|formal)
     pids=()
     for lane in 0 1 2 3; do
-      "$py" revision/campaign.py "$2" "$1" --batch "$SLURM_ARRAY_TASK_ID" --lane "$lane" &
+      "$py" revision/campaign.py "$2" "$1" --batch "$SLURM_ARRAY_TASK_ID" --lane "$lane" --scope "$scope" &
       pids+=("$!")
     done
     failed=0
@@ -31,7 +32,7 @@ case "$1" in
   freeze) "$py" revision/campaign.py "$2" freeze ;;
   evaluate)
     if [[ "$2" == heat ]]; then "$py" revision/fresh_heat.py original; fi
-    "$py" revision/campaign.py "$2" evaluate
+    "$py" revision/campaign.py "$2" evaluate --scope "$scope"
     ;;
   original) "$py" revision/fresh_heat.py original ;;
   *) echo "Unknown stage $1" >&2; exit 2 ;;
